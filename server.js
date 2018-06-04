@@ -33,16 +33,16 @@ var httpsOptions = {
 };
 const server = https.Server(httpsOptions, app);
 const hostName = 'localhost';
-const port = '8080'; 
-const nodeEnv = (process.env.NODE_ENV)?process.env.NODE_ENV:'development';
-if(nodeEnv !== 'production') {
+const port = '8080';
+const nodeEnv = (process.env.NODE_ENV) ? process.env.NODE_ENV : 'development';
+if (nodeEnv !== 'production') {
     console.log('Do some development stuff!');
 }
 
 /*
 Mongoose (MongoDb-port)
 */
-const mongoDbConnectionString = 'mongodb://mobdev2:wickedman@ds111754.mlab.com:11754/mobdev2-jordvand9';
+const mongoDbConnectionString = 'mongodb://imosh:123456@ds121889.mlab.com:21889/mobdev2';
 mongoose.connect(mongoDbConnectionString);
 mongoose.Promise = global.Promise;
 const db = mongoose.connection;
@@ -70,7 +70,7 @@ Express.js settings
 app.use(express.static(path.join(__dirname, 'client/build')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true}));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use('', routes);
 app.use((req, res, next) => {
     const err = new Error('Not Found!');
