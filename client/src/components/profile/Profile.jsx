@@ -170,8 +170,8 @@ class Profile extends Component {
   }
 }
 
-PostsList.propTypes = {
+Profile.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(PostsList);
+export default withStyles(styles)(Profile);

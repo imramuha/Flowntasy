@@ -12,6 +12,8 @@ const cors = require('cors');
 const app = express();
 const mongoose = require('mongoose');
 const auth = require('./server/api/v1/providers/auth')();
+const PORT = process.env.PORT || 5000
+
 
 /*
 Custom Routes
@@ -87,6 +89,7 @@ app.use((err, req, res, next) => {
 /*
 Launch server
 */
-server.listen(port, hostName, () => {
-    console.log(`Node server running at https://${hostName}:${port}/!`)
-});
+server.listen(process.env.PORT || 5000)/*
+server.listen(PORT, () => {
+    console.log(`Node server running!`)
+});*/

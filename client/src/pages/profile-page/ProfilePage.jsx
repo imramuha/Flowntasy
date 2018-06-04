@@ -25,7 +25,7 @@ class ProfilePage extends Component {
     return (
       <div>
         <div className="c-max">
-              <ProfileDetail userId={ this.props.match.params.id }/>
+              <Profile userId={ this.props.match.params.id }/>
         </div>
       </div>
     )

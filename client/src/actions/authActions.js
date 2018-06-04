@@ -12,7 +12,7 @@ export function signInActionLocalStrategy({ email, password }, history) {
       };
 
 
-      const response = await fetch('/api/v1/auth/local', options);
+      const response = await fetch('api/v1/auth/local', options);
       // console.log(response);
       const responseJson = await response.json();
 
