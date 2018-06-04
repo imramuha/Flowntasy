@@ -35,7 +35,7 @@ class CommunityCreatePage extends Component {
 
   render() {
     return (
-      <div class="backgroundCreateForm">
+      <div className="backgroundCreateForm">
         <Header />
               <CommunityForm communityId={ this.state.boSelectedCommunityId } />
       </div>

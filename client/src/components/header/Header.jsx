@@ -99,18 +99,18 @@ class Header extends Component {
   burgermenuLinks() {
     if (this.props.authenticated) {
       const burgermenuLinks = [
-        <a component={Link} href="/feed" >FEED</a>,
-        <a component={Link} href="/profile"  >PROFILE</a>,
-        <a component={Link} href="/home"  >HOME</a>,
-        <a component={Link} href="/discover/posts">STORIES</a>,
-        <a component={Link} href="/discover/create-post">CREATE STORY</a>,
-        <a component={Link} href="/community/communities" >COMMUNITIES</a>,
-        <a component={Link} href="/community/create-community">CREATE COMMUNITY</a>,
-        <a component={Link} href="/about-us"  >ABOUT US</a>,
-        <a component={Link} href="/terms-of-service"  >TERMS & SERVICE</a>,
-        <a component={Link} href="/privacy-policy" >PRIVACY POLICY</a>,
-        <a component={Link} href="/backoffice"  >BACKOFFICE</a>,
-        <a onClick={signOutAction} component={Link} href="/home">SIGN OUT</a>,
+        <a  href="/feed" >FEED</a>,
+        <a   href="/profile"  >PROFILE</a>,
+        <a   href="/home"  >HOME</a>,
+        <a   href="/discover/posts">STORIES</a>,
+        <a   href="/discover/create-post">CREATE STORY</a>,
+        <a   href="/community/communities" >COMMUNITIES</a>,
+        <a   href="/community/create-community">CREATE COMMUNITY</a>,
+        <a   href="/about-us"  >ABOUT US</a>,
+        <a   href="/terms-of-service"  >TERMS & SERVICE</a>,
+        <a   href="/privacy-policy" >PRIVACY POLICY</a>,
+        <a   href="/backoffice"  >BACKOFFICE</a>,
+        <a onClick={signOutAction}   href="/home">SIGN OUT</a>,
 
         // if role is admin show all -> if role is not admin but user is authenticated -> remove backoffice
       ]; if (this.props.role != '5b0621fa6044ae5350afd7fc') {
@@ -126,14 +126,14 @@ class Header extends Component {
   navigationLinks() {
     if (this.props.authenticated) {
       const authenticatedLinks = [
-        <a component={Link} href="/feed" >FEED</a>,
-        <a component={Link} href="/profile"  >PROFILE</a>,
-        <a component={Link} href="/home"  >HOME</a>,
-        <a component={Link} href="/about-us"  >ABOUT US</a>,
-        <a component={Link} href="/terms-of-service"  >TERMS & SERVICE</a>,
-        <a component={Link} href="/privacy-policy" >PRIVACY POLICY</a>,
-        <a component={Link} href="/backoffice"  >BACKOFFICE</a>,
-        <a onClick={signOutAction} component={Link} href="/home">SIGN OUT</a>,
+        <a   href="/feed" >FEED</a>,
+        <a   href="/profile"  >PROFILE</a>,
+        <a   href="/home"  >HOME</a>,
+        <a   href="/about-us"  >ABOUT US</a>,
+        <a   href="/terms-of-service"  >TERMS & SERVICE</a>,
+        <a   href="/privacy-policy" >PRIVACY POLICY</a>,
+        <a   href="/backoffice"  >BACKOFFICE</a>,
+        <a onClick={signOutAction}   href="/home">SIGN OUT</a>,
 
         // if role is admin show all -> if role is not admin but user is authenticated -> remove backoffice
       ]; if (this.props.role != '5b0621fa6044ae5350afd7fc') {
@@ -149,8 +149,8 @@ class Header extends Component {
   discoverLinks() {
     if (this.props.authenticated) {
       const discoverLinks = [
-        <a component={Link} href="/discover/posts">Discover stories</a>,
-        <a component={Link} href="/discover/create-post">Create one yourself</a>,
+        <a   href="/discover/posts">Discover stories</a>,
+        <a   href="/discover/create-post">Create one yourself</a>,
       ]
       return discoverLinks;
     }
@@ -159,8 +159,8 @@ class Header extends Component {
   communityLinks() {
     if (this.props.authenticated) {
       const communityLinks = [
-        <a component={Link} href="/community/communities" >Find a community</a>,
-        <a component={Link} href="/community/create-community">Create a community</a>,
+        <a   href="/community/communities" >Find a community</a>,
+        <a   href="/community/create-community">Create a community</a>,
       ]
       return communityLinks;
     }
@@ -213,7 +213,7 @@ class Header extends Component {
 
           <div className="dropdownSign hide">
             <button className="dropbuttonSign header" >
-              <i class="fas fa-user-circle" /> &#9660;
+              <i className="fas fa-user-circle" /> &#9660;
               <div className="dropdownSign-content header user">
                 {links.map(links => <div> {links} </div>)}
               </div>

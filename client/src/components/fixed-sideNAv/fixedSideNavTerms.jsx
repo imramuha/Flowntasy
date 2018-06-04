@@ -46,7 +46,7 @@ class FixedSideNavTerms extends Component {
 
     render() {       
         return (
-            <div class="sidenav">
+            <div className="sidenav">
             <a className="sideNavActive" onclick={this.activeClass('#terms-of')} className={(this.activeClass('#terms-of') ? 'sideNavActive' : 'sideNavNotActive')}  href="./terms-of-service#terms-of">Terms of Service</a>
             <a className="sideNavActive" onclick={this.activeClass('#age-13')} className={(this.activeClass('#age-13') ? 'sideNavActive' : 'sideNavNotActive')}  href="./terms-of-service#age-13">You Need href be 13 </a>
             <a className="sideNavActive" onclick={this.activeClass('#need-account')} className={(this.activeClass('#need-account') ? 'sideNavActive' : 'sideNavNotActive')}  href="./terms-of-service#need-account">You Need an Account</a>

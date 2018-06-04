@@ -55,9 +55,9 @@ class PostsList extends Component {
             <div className="feedPostUser PostsList">made by {post._user.username}</div>
             <div className="listPostIcons PostsList">
   
-                <i class="fas fa-heart"></i>{Object.keys(post.liked_users).length}
-                <i class="fas fa-eye"></i>
-                <i class="fas fa-bookmark"></i>
+                <i className="fas fa-heart"></i>{Object.keys(post.liked_users).length}
+                <i className="fas fa-eye"></i>
+                <i className="fas fa-bookmark"></i>
             
             </div>
             <div className="feedPostUser PostsList" >{post.description}</div>

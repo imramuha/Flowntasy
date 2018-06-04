@@ -18,7 +18,7 @@ export function signInActionLocalStrategy({ email, password }, history) {
 
       // checks the API response
       // if user banned -> unauthenticate it and store a message into the localstorage
-      if (response.ok && responseJson['status'] == 'BANNED') {
+      if (response.ok && responseJson['status'] === 'BANNED') {
         dispatch({
           type: UNAUTHENTICATED,
           payload: responseJson
@@ -89,7 +89,7 @@ export function authStatusClear() {
   // checks if user is banned -> removes its auth from LS as well
   if (JSON.parse(localStorage.getItem('flowntasy_auth'))) {
     const userStatus = JSON.parse(localStorage.getItem('flowntasy_auth'));
-    if (userStatus['status'] == 'BANNED') {
+    if (userStatus['status'] === 'BANNED') {
       localStorage.removeItem('flowntasy_auth');
     }
   }
@@ -109,7 +109,7 @@ export function getError() {
     const banMessage = "Your account is disabled, please get in touch."
     return banMessage;
   } else {
-    const errorMessage = "Something went wrong, please try again."
-    return errorMessage;
+    const succesMessage = "Your account has been made!"
+    return succesMessage;
   }
 }

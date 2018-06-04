@@ -92,26 +92,26 @@ class SignIn extends Component {
   render() {
     const { handleSubmit } = this.props;
     return (
-      <div class="wrap">          
-        <div class="content-left">
-          <div class="content-info">
+      <div  className="wrap">          
+        <div  className="content-left">
+          <div  className="content-info">
             <h2>Changes in the current</h2>            
             <h3>Communities are here</h3>
             <p>You can now join create, join or visit communities. Communities makes it possible to connect with people from around the world and share your experiences.</p>                
             <h3>Sign In with</h3>
-            <div class="socialLinks">
-              <a appId={config.FACEBOOK_APP_ID} autoLoad={false} fields="name,email,picture" callback={this.facebookResponse}><i class="fab fa-facebook-f"></i></a>
-              <a href="#"><i class="fab fa-twitter"></i></a>
-              <a href="#"><i class="fab fa-whatsapp"></i></a>
-              <a href="#"><i class="fab fa-reddit-alien"></i></a>
-              <a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-              <a href="#"><i class="fab fa-dribbble" aria-hidden="true"></i></a>
+            <div  className="socialLinks">
+              <a appId={config.FACEBOOK_APP_ID} autoLoad={false} fields="name,email,picture" callback={this.facebookResponse}><i  className="fab fa-facebook-f"></i></a>
+              <a href="#"><i  className="fab fa-twitter"></i></a>
+              <a href="#"><i  className="fab fa-whatsapp"></i></a>
+              <a href="#"><i  className="fab fa-reddit-alien"></i></a>
+              <a href="#"><i  className="fab fa-instagram" aria-hidden="true"></i></a>
+              <a href="#"><i  className="fab fa-dribbble" aria-hidden="true"></i></a>
             </div>
               <p>Don't have an account? <a href="#"> Sign Up</a></p>
           </div>
         </div>
-        <div class="content-main">
-          <div class="inputSide">
+        <div  className="content-main">
+          <div  className="inputSide">
             <h2>We have been waiting for you</h2>
 
             <form onSubmit={ handleSubmit(this.submit)} className="formSign" >

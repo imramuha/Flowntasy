@@ -62,9 +62,9 @@ class feedPage extends Component {
               </div>
               <div className="feedPostIcons">
                 <div className="feedPostIcon">
-                  <i class="fas fa-heart"></i>{Object.keys(post.liked_users).length}
-                  <i class="fas fa-eye"></i>
-                  <i class="fas fa-bookmark"></i>
+                  <i className="fas fa-heart"></i>{Object.keys(post.liked_users).length}
+                  <i className="fas fa-eye"></i>
+                  <i className="fas fa-bookmark"></i>
                 </div>
 
               </div>

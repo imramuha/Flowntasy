@@ -26,149 +26,51 @@ class Profile extends Component {
     super(props);
 
     this.state = {
-      posts: null
+      message: 'You are currently not logged is',
+      username: '',
+    }
+  }
+
+  // status msg if auth is user or admin
+  getUserStatusMessage = () => {
+    if (localStorage.getItem('flowntasy_auth')) {
+      this.setState({ message: JSON.parse(localStorage.getItem('flowntasy_auth'))['message'] })
+      this.setState({ username: JSON.parse(localStorage.getItem('flowntasy_auth'))['user']['username'] });;
     }
   }
 
   componentDidMount() {
-    fetch('https://flowntasy.herokuapp.com/api/v1/backoffice/postsTable')
-      .then(response => response.json())
-      .then(item => this.setState({ posts: item }));
+    setTimeout(() => {
+      this.getUserStatusMessage();
+    }, 1)
   }
 
   render() {
-    const { classes } = this.props;
-    if (this.state.posts) {
-      return (
-        <div className="listsContainer">
-          <div className="listHeader">
-
-
-            <h1>Experience the flow of other people</h1>
-            <div className="listsubHeader">
-
-
-              <div className="listCategories" >
-                <h1>CATEGORIES &#9660;</h1>
-              </div>
-
-              <div className="listsubCategories">
-                <button className="listsubCategory">
-                  POPULAR
-                </button>
-                <button className="listsubCategory">
-                  RISING
-                </button>
-                <button className="listsubCategory">
-                  NEW
-                </button>
-              </div>
-
-
+    return (
+    <div className="profile">
+        <div className="feedProfile">
+          <div className="feedImg">
+            <div className="coverImg">
             </div>
-
-
-            <div className="listPostsContainer">
-              <div className="listPost">
-                <div className="listPostImg">
-                </div>
-                <div className="listPostContent">
-                  <div>TITLE</div>
-                  <div>MADE BY</div>
-                  <div className="listPostIcons">
-                    <i className="fas fa-bars" />hello
-                  <i className="fas fa-bars" />hello
-                  <i className="fas fa-bars" />hello
-                </div>
-                  <div>DESCRIPTION Ho ho ho</div>
-                </div>
-              </div>
-              <div className="listPost">
-                <div className="listPostImg">
-                </div>
-                <div className="listPostContent">
-                  <div>TITLE</div>
-                  <div>MADE BY</div>
-                  <div className="listPostIcons">
-                    <i className="fas fa-bars" />hello
-                  <i className="fas fa-bars" />hello
-                  <i className="fas fa-bars" />hello
-                </div>
-                  <div>DESCRIPTION Ho ho ho</div>
-                </div>
-              </div>
-              <div className="listPost">
-                <div className="listPostImg">
-                </div>
-                <div className="listPostContent">
-                  <div>TITLE</div>
-                  <div>MADE BY</div>
-                  <div className="listPostIcons">
-                    <i className="fas fa-bars" />hello
-                  <i className="fas fa-bars" />hello
-                  <i className="fas fa-bars" />hello
-                </div>
-                  <div>DESCRIPTION Ho ho ho</div>
-                </div>
-              </div>
-              
-              <div className="listPost">
-                <div className="listPostImg">
-                </div>
-                <div className="listPostContent">
-                  <div>TITLE</div>
-                  <div>MADE BY</div>
-                  <div className="listPostIcons">
-                    <i className="fas fa-bars" />hello
-                  <i className="fas fa-bars" />hello
-                  <i className="fas fa-bars" />hello
-                </div>
-                  <div>DESCRIPTION Ho ho ho</div>
-                </div>
-              </div>
-              
-              
+            <div className="profileImg"> <div className="userStatusMessageFeed"><h3>{this.state.message}{this.state.username}</h3></div>
             </div>
-
-
           </div>
-          <div className="row">
-            {this.state.posts.map((element, i) => (
-              <div className="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-3" key={i}>
-                <Card className={classes.card} key={element._id}>
-                  <CardMedia
-                    className={classes.media}
-                    image="https://material-components-web.appspot.com/images/16-9.jpg"
-                    title="Contemplative Reptile"
-                  />
-                  <CardContent>
-                    <Typography gutterBottom variant="headline" component="h2">
-                      {element.title}
-                    </Typography>
-                    <Typography component="p">
-                      {element.description}
-                    </Typography>
-                  </CardContent>
-                  <CardActions>
-                    <Button size="small" color="primary">
-                      {(element._category) ? element.categories.name : 'Uncategorized'}
-                    </Button>
-                  </CardActions>
-                </Card>
-              </div>
-            ))}
-          </div>
+          <div className="profileStats">FLOWS</div>
+          <div className="profileStats">FOLLOWERS</div>
+          <div className="profileStats">FOLLOWING</div>
         </div>
-      );
-    } else {
-      return (
-        <div>
+        <div className="feedContent">
+          <button className="feedButton">SETTINGS</button>
+          <button className="feedButton">MY HISTORY</button>
+          <button className="feedButton">MESSAGES</button>
 
         </div>
-      )
+      </div>
+    )
     }
+  
   }
-}
+
 
 Profile.propTypes = {
   classes: PropTypes.object.isRequired,

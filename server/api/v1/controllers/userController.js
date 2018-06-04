@@ -97,3 +97,18 @@ exports.user_delete = function(req, res, next) {
       return errorHandler.handleAPIError(500, `Could not delete User with id: ${id}`, next);
     });
 }
+
+/*
+Get a certain post
+*/
+exports.get_post = function(req, res, next) {
+  const id = req.params.postId;
+  const query = Post.findById(id).populate('categories').populate('_user');
+  query.exec((err, post) => {
+    if (err) return errorHandler.handleAPIError(500, `Could not get the post with id: ${id}`, next);
+    if (!post) {
+      return errorHandler.handleAPIError(404, `Post not found with id: ${id}`, next);
+    }
+    return res.json(post);
+  });
+}

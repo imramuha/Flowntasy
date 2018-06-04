@@ -20,7 +20,7 @@ class PrivacyPolicy extends Component {
     return (
       <div>
         <FixedNavBarPrivacy />
-        <div class="moreMain">
+        <div className="moreMain">
           <h1><a id="privacy-policy">
             Privacy Policy
           </a></h1>

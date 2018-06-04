@@ -9,7 +9,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 /*
 Material UI
 */
-import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles';
+import {createMuiTheme } from 'material-ui/styles';
 import './App.css';
 
 /*
@@ -48,7 +48,6 @@ if(auth) {
 /*
 Theme
 */
-const theme = createMuiTheme();
 
 class App extends Component {
   render() {    

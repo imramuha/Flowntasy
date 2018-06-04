@@ -12,18 +12,22 @@
 
   
 .listCommunityImg {
-    background:  map-get($colors, 'greymidnight');
+  background: url(../../assets/videos/communityImg.jpg) center;
+    background-size: cover;
     float: left;
-    width: 25%;
-    height: 250px;
+    width: 40%;
+    height: 100px;
     @media screen and(min-width: 400px) {
-      height: 150px;
+      height: 200px;
+      width: 35%;
     }
     @media screen and(min-width: 992px) {
-      height: 150px;
+      height: 200px;
+      width: 35%;
     }
     @media screen and(min-width: 992px) {
-      height: 250px;
+      height: 300px;
+      width: 25%;
     }
   }
   .listPostContent.CommunityList {
@@ -37,6 +41,9 @@
     margin-top: 10%;
     background:none;
     border:none;
+    @media screen and(max-width: 400px) {
+      float: left;
+    }
   }
 
    .communityJoinButton {

@@ -11,22 +11,19 @@ Component styles
 import './HomePage.css';
 
 class HomePage extends Component {
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     return (
       <div>
-        <div class="homePage">
+        <div className="homePage">
           <div className="cube"></div>
           <div className="cube"></div>
           <div className="cube"></div>
           <div className="cube"></div>
           <div className="cube"></div>     
-          <div class="frame">
+          <div className="frame">
             <div className="scanlines"></div>
-            <div class="backgroundImg"></div>
+            <div className="backgroundImg"></div>
             <video className="backgroundVideo" src={require("../../assets/videos/backgroundVid.mp4")} autoPlay='true' preload="true" loop="true"></video>
             <div className="homePageContent">
               <h1 className="homePageTitle" >FLOWNTASY<span>_</span></h1>

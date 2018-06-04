@@ -11,7 +11,7 @@ import Enum from "es6-enum";
 Material UI
 */
 import { withStyles } from 'material-ui/styles';
-import Table, { TableBody, TableCell, TableHead, TableRow } from 'material-ui/Table';
+import {TableRow } from 'material-ui/Table';
 import Dialog, {
   DialogActions,
   DialogContent,
@@ -181,8 +181,8 @@ class CommunitiesTable extends Component {
 
     return (
       <div className="backoffice">
-      <a href='/backoffice'><i class="fas fa-arrow-alt-circle-left backofficeHeading Icon"></i></a>
-       <h1 class="backofficeHeading">COMMUNITIES</h1>
+      <a href='/backoffice'><i className="fas fa-arrow-alt-circle-left backofficeHeading Icon"></i></a>
+       <h1 className="backofficeHeading">COMMUNITIES</h1>
         <table className="tableBackoffice">
           <thead className="theadBackoffice">
             <tr className="trBackoffice">

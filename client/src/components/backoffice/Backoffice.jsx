@@ -14,6 +14,13 @@ const styles = theme => ({
     alignItems: 'center',
     margin: '30px 10%'
   },
+  rootForm: {
+    minWidth: 30,
+    minHeight: 30,
+    width: '80%',
+    margin: '30px 10%',
+    color: '#2B1C2D',
+  },
   image: {
     position: 'relative',
     margin: '2px',
@@ -99,6 +106,7 @@ function Backoffice(props) {
   const { classes } = props;
 
   return (
+    <div>
     <div className={classes.root}>
       {images.map(image => (
         <ButtonBase
@@ -125,6 +133,7 @@ function Backoffice(props) {
           </span>
         </ButtonBase>
       ))}
+    </div>
     </div>
   );
 }

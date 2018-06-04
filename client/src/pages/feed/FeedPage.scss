@@ -43,6 +43,7 @@
 }
 
 .feedImg {
+
     width: 80%;
     height: 38%;
     float: right;
@@ -85,19 +86,22 @@
 }
 
 .coverImg {
+    background: url(../../assets/videos/coverImg.jpg) center;
+    background-size: cover;
     width: 100%;
     height: 60%;
     position: absolute;
-    background: map-get($colors, 'greyeggplant');
 }
 
 .profileImg {
     width: 50%;
     height: 50%;
     border-radius: 100%;
-    background: map-get($colors, 'greymidnight');
+    background: url(../../assets/videos/profileImg.jpg) center;
+    background-size: cover;
+    border: 2px solid white; 
     position: absolute;
-    margin: 15% 25%;
+    margin: 13% 25%;
     text-align: center;
 }
 
@@ -162,9 +166,11 @@
 }
 
 .feedPostImage {
+    background: url(../../assets/videos/story_2.jpg) center;
+    border: 2px solid map-get($colors, 'snow');
+    background-size: cover;
     width: 150px;
     height: 150px;
-    background: map-get($colors, 'greymidnight');
     float: left;
     margin: 0px 20px 0px 0px; 
 

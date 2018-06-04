@@ -16,9 +16,6 @@ Component styles
 import './PostsPage.css';
 
 class PostsPage extends Component {
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     return (

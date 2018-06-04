@@ -69,7 +69,9 @@ class SignUp extends Component {
   // on submit we also check our localstorage for errors -> if an error is found we change our message state
   submit = (values) => {
     this.props.signUp(values, this.props.history);
-    this.setState({message: getError()});
+    setTimeout(() => {
+      this.setState({message: getError()});
+    }, 500);
     authStatusClear();
   }
 
@@ -105,27 +107,27 @@ class SignUp extends Component {
   render() {
     const { handleSubmit } = this.props;
     return (
-        <div class="wrap">          
-          <div class="content-left">
-            <div class="content-info">
+        <div  className="wrap">          
+          <div  className="content-left">
+            <div  className="content-info">
               <h2>FLOWNTASY</h2>            
               <h3>Just let it flow &#128394;</h3>
               <p>Everything you think turns into an on-the-go experience. The <i>flowntasy</i> is a one-of-a-kind adventure in creation and discovery.</p>                
               <h3>Sign Up with</h3>
-              <div class="socialLinks">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-whatsapp"></i></a>
-                <a href="#"><i class="fab fa-reddit-alien"></i></a>
-                <a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-                <a href="#"><i class="fab fa-dribbble" aria-hidden="true"></i></a>
+              <div  className="socialLinks">
+                <a href="#"><i  className="fab fa-facebook-f"></i></a>
+                <a href="#"><i  className="fab fa-twitter"></i></a>
+                <a href="#"><i  className="fab fa-whatsapp"></i></a>
+                <a href="#"><i  className="fab fa-reddit-alien"></i></a>
+                <a href="#"><i  className="fab fa-instagram" aria-hidden="true"></i></a>
+                <a href="#"><i  className="fab fa-dribbble" aria-hidden="true"></i></a>
               </div>
                 <p>Already have an account?  <a href="#"> Sign In</a></p>
             </div>
           </div>
 
-          <div class="content-main">
-            <div class="inputSide">
+          <div className="content-main">
+            <div className="inputSide">
               <h2>The current is waiting for you</h2>
 
               <form onSubmit={ handleSubmit(this.submit) } className="formSign">

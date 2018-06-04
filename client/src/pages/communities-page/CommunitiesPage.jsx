@@ -16,9 +16,7 @@ Component styles
 import './CommunitiesPage.css';
 
 class CommunitiesPage extends Component {
-  constructor(props) {
-    super(props);
-  }
+
 
   render() {
     return (

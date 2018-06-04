@@ -35,7 +35,7 @@ class PostCreatePage extends Component {
 
   render() {
     return (
-      <div class="backgroundCreateForm">
+      <div className="backgroundCreateForm">
         <Header />
               <PostForm postId={ this.state.boSelectedPostId } />
       </div>

@@ -77,7 +77,9 @@
 }
 
 .listPostImg {
-  background:  map-get($colors, 'greymidnight');
+  background: url(../../assets/videos/story_1.jpg) center;
+  border: 2px solid map-get($colors, 'greyeggplant');
+  background-size: cover;
   float: left;
   width: 30%;
   height: 130px;

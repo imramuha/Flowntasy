@@ -15,14 +15,12 @@ Component styles
 import './SignupPage.css';
 
 class SignupPage extends Component {
-  constructor(props) {
-    super(props);
-  }
+
 
   render() {
     return (
       <div>
-         <div class="signContainer">
+         <div className="signContainer">
           <h1 className="signTitle">JOIN THE FLOW<span>_</span></h1>
           <SignUp />
         </div>

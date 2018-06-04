@@ -44,16 +44,16 @@ class CommunitiesList extends Component {
   getCommunitiesAsJSX() {
     let containerElement = '';
     if (this.state.communities) {
-      containerElement = this.state.communities.map((community, index) => (
+      containerElement = this.state.communities.map(( community, index) => (
         <div className="listCommunity">
           <div className="listCommunityImg">
           </div>
           <div className="listPostContent CommunityList">
-            <div className="feedPostTitle PostsList">{community.community}</div>
+            <div className="feedPostTitle PostsList">{ community.community}</div>
             <div className="feedPostUser PostsList">{community._category.category}</div>
             <div className="feedPostTitle PostsList">{community.description}</div>
             <div className="feedPostTitle PostsList">
-            <i class="fas fa-users"></i> {Object.keys(community.users_in).length}<br />
+            <i className="fas fa-users"></i> {Object.keys(community.users_in).length}<br />
             </div>
           </div>
           <div><button className="communityJoinButton">JOIN</button></div>

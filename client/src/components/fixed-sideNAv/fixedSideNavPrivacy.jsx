@@ -46,7 +46,7 @@ class FixedSideNavPrivacy extends Component {
 
     render() {       
         return (
-            <div class="sidenav">
+            <div className="sidenav">
                 <a className="sideNavActive" onclick={this.activeClass('#privacy-policy')} className={(this.activeClass('#privacy-policy') ? 'sideNavActive' : 'sideNavNotActive')} href="./privacy-policy#privacy-policy">Privacy Policy</a>
                 <a className="sideNavActive" onclick={this.activeClass('#personal-information')} className={(this.activeClass('#personal-information') ? 'sideNavActive' : 'sideNavNotActive')} href="./privacy-policy#personal-information">What is personal information?</a>
                 <a className="sideNavActive" onclick={this.activeClass('#collect-use')} className={(this.activeClass('#collect-use') ? 'sideNavActive' : 'sideNavNotActive')} href="./privacy-policy#collect-use">What do we collect and why do we use it?</a>
