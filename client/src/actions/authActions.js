@@ -56,7 +56,7 @@ export function signInActionFacebookStrategy(accessToken, history) {
         mode: 'cors',
         cache: 'default'
       };
-      const response = await fetch('/api/v1/auth/facebook', options);
+      const response = await fetch('https://flowntasy.herokuapp.com/api/v1/auth/facebook', options);
       const responseJson = await response.json();
 
       dispatch({

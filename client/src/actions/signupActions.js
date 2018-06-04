@@ -11,7 +11,7 @@ export function signUpActionLocalStrategy({ email, username, password }, history
           cache: 'default'
       };
 
-      const response = await fetch('/api/v1/signup', options);
+      const response = await fetch('https://flowntasy.herokuapp.com/api/v1/signup', options);
       const responseJson = await response.json();
 
       
