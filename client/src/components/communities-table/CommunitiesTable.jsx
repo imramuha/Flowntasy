@@ -93,19 +93,19 @@ class CommunitiesTable extends Component {
 
     switch(this.state.communityAction) {
       case COMMUNITYACTIONSENUM.DELETE:
-        url = `/api/v1/backoffice/communitiesTable/${this.state.communityId}`;
+        url = `https://flowntasy.herokuapp.com/api/v1/backoffice/communitiesTable/${this.state.communityId}`;
         options = {
           method: 'DELETE'
         }
         break;
       case COMMUNITYACTIONSENUM.SOFTDELETE:
-        url = `/api/v1/backoffice/communitiesTable/${this.state.communityId}/softdelete`;
+        url = `https://flowntasy.herokuapp.com/api/v1/backoffice/communitiesTable/${this.state.communityId}/softdelete`;
         options = {
           method: 'PATCH'
         }
         break;
       case COMMUNITYACTIONSENUM.SOFTUNDELETE:
-        url = `/api/v1/backoffice/communitiesTable/${this.state.communityId}/softundelete`;
+        url = `https://flowntasy.herokuapp.com/api/v1/backoffice/communitiesTable/${this.state.communityId}/softundelete`;
         options = {
           method: 'PATCH'
         }
@@ -141,7 +141,7 @@ class CommunitiesTable extends Component {
   }
 
   loadCommunities = () => {
-    fetch('/api/v1/backoffice/communitiesTable')
+    fetch('https://flowntasy.herokuapp.com/api/v1/backoffice/communitiesTable')
       .then( response => response.json())
       .then( item => this.setState({ communities: item })); 
   }

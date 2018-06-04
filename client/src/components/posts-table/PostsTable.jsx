@@ -95,19 +95,19 @@ class PostsTable extends Component {
 
     switch(this.state.postAction) {
       case POSTACTIONSENUM.DELETE:
-        url = `/api/v1/backoffice/postsTable/${this.state.postId}`;
+        url = `https://flowntasy.herokuapp.com/api/v1/backoffice/postsTable/${this.state.postId}`;
         options = {
           method: 'DELETE'
         }
         break;
       case POSTACTIONSENUM.SOFTDELETE:
-        url = `/api/v1/backoffice/postsTable/${this.state.postId}/softdelete`;
+        url = `https://flowntasy.herokuapp.com/api/v1/backoffice/postsTable/${this.state.postId}/softdelete`;
         options = {
           method: 'PATCH'
         }
         break;
       case POSTACTIONSENUM.SOFTUNDELETE:
-        url = `/api/v1/backoffice/postsTable/${this.state.postId}/softundelete`;
+        url = `https://flowntasy.herokuapp.com/api/v1/backoffice/postsTable/${this.state.postId}/softundelete`;
         options = {
           method: 'PATCH'
         }
@@ -143,7 +143,7 @@ class PostsTable extends Component {
   }
 
   loadPosts = () => {
-    fetch('/api/v1/backoffice/postsTable')
+    fetch('https://flowntasy.herokuapp.com/api/v1/backoffice/postsTable')
       .then( response => response.json())
       .then( item => this.setState({ posts: item })); 
   }

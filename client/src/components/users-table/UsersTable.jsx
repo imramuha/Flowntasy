@@ -95,19 +95,19 @@ class UsersTable extends Component {
 
     switch(this.state.userAction) {
       case USERACTIONSENUM.DELETE:
-        url = `/api/v1/backoffice/usersTable/${this.state.userId}`;
+        url = `https://flowntasy.herokuapp.com/api/v1/backoffice/usersTable/${this.state.userId}`;
         options = {
           method: 'DELETE'
         }
         break;
       case USERACTIONSENUM.SOFTDELETE:
-        url = `/api/v1/backoffice/usersTable/${this.state.userId}/softdelete`;
+        url = `https://flowntasy.herokuapp.com/api/v1/backoffice/usersTable/${this.state.userId}/softdelete`;
         options = {
           method: 'PATCH'
         }
         break;
       case USERACTIONSENUM.SOFTUNDELETE:
-        url = `/api/v1/backoffice/usersTable/${this.state.userId}/softundelete`;
+        url = `https://flowntasy.herokuapp.com/api/v1/backoffice/usersTable/${this.state.userId}/softundelete`;
         options = {
           method: 'PATCH'
         }
@@ -143,7 +143,7 @@ class UsersTable extends Component {
   }
 
   loadUsers = () => {
-    fetch('/api/v1/backoffice/usersTable')
+    fetch('https://flowntasy.herokuapp.com/api/v1/backoffice/usersTable')
     .then( response => response.json())
     .then( item => this.setState({ users: item })); 
   }

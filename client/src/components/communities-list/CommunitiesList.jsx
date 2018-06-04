@@ -32,7 +32,7 @@ class CommunitiesList extends Component {
   }
 
   componentDidMount() {
-    fetch('/api/v1/backoffice/communitiesTable')
+    fetch('https://flowntasy.herokuapp.com/api/v1/backoffice/communitiesTable')
       .then(response => response.json())
       .then(item => this.setState({ communities: item }));
   }

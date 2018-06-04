@@ -77,7 +77,7 @@ class CommunityForm extends Component {
   }
 
   fetchCommunityCreateGet = () => {
-    fetch('/api/v1/community/create-community', {
+    fetch('https://flowntasy.herokuapp.com/api/v1/community/create-community', {
       method: 'GET',
       headers: {
         'content-type': 'application/json'
@@ -92,7 +92,7 @@ class CommunityForm extends Component {
   }
 
   fetchCommunityUpdateGet = () => {
-    fetch('/api/v1/community/create-community', {
+    fetch('https://flowntasy.herokuapp.com/api/v1/community/create-community', {
       method: 'GET',
       headers: {
         'content-type': 'application/json'

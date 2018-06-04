@@ -79,7 +79,7 @@ class PostForm extends Component {
   }
 
   fetchPostCreateGet = () => {
-    fetch('/api/v1/discover/create-post', {
+    fetch('https://flowntasy.herokuapp.com/api/v1/discover/create-post', {
       method: 'GET',
       headers: {
         'content-type': 'application/json'
@@ -94,7 +94,7 @@ class PostForm extends Component {
   }
 
   fetchPostUpdateGet = () => {
-    fetch('/api/v1/discover/create-post', {
+    fetch('https://flowntasy.herokuapp.com/api/v1/discover/create-post', {
       method: 'GET',
       headers: {
         'content-type': 'application/json'

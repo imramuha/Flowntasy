@@ -88,7 +88,7 @@ class SignUp extends Component {
   }
 
   fetchUserCreateGet = () => {
-    fetch('/api/v1/signup/create', {
+    fetch('https://flowntasy.herokuapp.com/api/v1/signup/create', {
       method: 'GET',
       headers: {
         'content-type': 'application/json'

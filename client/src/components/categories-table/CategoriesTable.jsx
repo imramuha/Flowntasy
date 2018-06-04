@@ -96,19 +96,19 @@ class CategoriesTable extends Component {
 
     switch(this.state.categoryAction) {
       case CATEGORYACTIONSENUM.DELETE:
-        url = `/api/v1/backoffice/categoriesTable/${this.state.categoryId}`;
+        url = `https://flowntasy.herokuapp.com/api/v1/backoffice/categoriesTable/${this.state.categoryId}`;
         options = {
           method: 'DELETE'
         }
         break;
       case CATEGORYACTIONSENUM.SOFTDELETE:
-        url = `/api/v1/backoffice/categoriesTable/${this.state.categoryId}/softdelete`;
+        url = `https://flowntasy.herokuapp.com/api/v1/backoffice/categoriesTable/${this.state.categoryId}/softdelete`;
         options = {
           method: 'PATCH'
         }
         break;
       case CATEGORYACTIONSENUM.SOFTUNDELETE:
-        url = `/api/v1/backoffice/categoriesTable/${this.state.categoryId}/softundelete`;
+        url = `https://flowntasy.herokuapp.com/api/v1/backoffice/categoriesTable/${this.state.categoryId}/softundelete`;
         options = {
           method: 'PATCH'
         }
@@ -145,7 +145,7 @@ class CategoriesTable extends Component {
   }
 
   loadCategories = () => {
-    fetch('/api/v1/backoffice/categoriesTable')
+    fetch('https://flowntasy.herokuapp.com/api/v1/backoffice/categoriesTable')
       .then( response => response.json())
       .then( item => this.setState({ categories: item })); 
   }

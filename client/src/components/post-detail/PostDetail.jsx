@@ -15,7 +15,7 @@ class PostDetail extends Component {
   }
 
   componentDidMount() {
-    fetch(`/api/v1/backoffice/postsTable/${this.props.postId}`)
+    fetch(`https://flowntasy.herokuapp.com/api/v1/backoffice/postsTable/${this.props.postId}`)
       .then( response => response.json())
       .then( item => this.setState({ post: item })); 
       console.log(this.props.postId);

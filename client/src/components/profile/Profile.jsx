@@ -31,7 +31,7 @@ class Profile extends Component {
   }
 
   componentDidMount() {
-    fetch('/api/v1/backoffice/postsTable')
+    fetch('https://flowntasy.herokuapp.com/api/v1/backoffice/postsTable')
       .then(response => response.json())
       .then(item => this.setState({ posts: item }));
   }
