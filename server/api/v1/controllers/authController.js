@@ -25,11 +25,11 @@ console.log(user._role);
     function getMessageStatus () {
     // checks role -> specific message
     if(user._role == '5b0621fa6044ae5350afd7fb') {
-      return 'You are logged in as USER'
+      return 'USER: '
     } else if (user._role == '5b0621fa6044ae5350afd7fc') {
-      return 'You are logged in as ADMIN'
+      return 'ADMIN: '
     } else {
-      return 'You are logged in';
+      return 'User: ';
     }
   }
   const messageStatus = getMessageStatus();
@@ -44,6 +44,7 @@ console.log(user._role);
           user: {
             id: user._id,
             email: user.email,
+            username: user.username,
             _role: user._role,
             _status: user._status,
           },
