@@ -12,7 +12,7 @@ const cors = require('cors');
 const app = express();
 const mongoose = require('mongoose');
 const auth = require('./server/api/v1/providers/auth')();
-const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT || 5000;
 
 
 /*
@@ -33,7 +33,7 @@ var httpsOptions = {
 };
 const server = https.Server(httpsOptions, app);
 const hostName = 'localhost';
-const port = '8080';
+const port = '8080'; 
 const nodeEnv = (process.env.NODE_ENV)?process.env.NODE_ENV:'development';
 if(nodeEnv !== 'production') {
     console.log('Do some development stuff!');
@@ -42,11 +42,11 @@ if(nodeEnv !== 'production') {
 /*
 Mongoose (MongoDb-port)
 */
-const mongoDbConnectionString = 'mongodb://imosh:123456@ds121889.mlab.com:21889/mobdev2';
+const mongoDbConnectionString = 'mongodb://mobdev2:wickedman@ds111754.mlab.com:11754/mobdev2-jordvand9';
 mongoose.connect(mongoDbConnectionString);
 mongoose.Promise = global.Promise;
 const db = mongoose.connection;
-db.on('error', console.error.bind(console, 'MongoDb Connection error!'));
+db.on('error', console.error.bind(console, 'MongoDb Cconnection error!'));
 
 /*
 Cors
@@ -78,6 +78,7 @@ app.use((req, res, next) => {
     next(err);
 });
 
+
 app.use((err, req, res, next) => {
     res.status(err.status || 500);
     res.json({
@@ -86,10 +87,11 @@ app.use((err, req, res, next) => {
     });
 });
 
+
+
 /*
 Launch server
 */
-server.listen(process.env.PORT || 5000)/*
-server.listen(PORT, () => {
+app.listen(PORT, () => {
     console.log(`Node server running!`)
-});*/
+});
