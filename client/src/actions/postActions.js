@@ -18,7 +18,7 @@ export function createPost({ title, description, body, categories, user}, histor
       // console.log(title)
       // console.log(categories);
 
-      const response = await fetch('/api/v1/discover/create-post', options);
+      const response = await fetch('https://flowntasy.herokuapp.com/api/v1/discover/create-post', options);
       const responseJson = await response.json();
 
       // console.log(responseJson);

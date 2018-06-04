@@ -17,7 +17,7 @@ export function createCommunity({ community, description, categories, user}, his
       // console.log(title)
       // console.log(categories);
 
-      const response = await fetch('/api/v1/community/create-community', options);
+      const response = await fetch('https://flowntasy.herokuapp.com/api/v1/community/create-community', options);
       const responseJson = await response.json();
 
       console.log('It was a succes');
