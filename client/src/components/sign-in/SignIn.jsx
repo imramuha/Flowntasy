@@ -71,7 +71,7 @@ class SignIn extends Component {
     authStatusClear();
     setTimeout(() => {
       this.setState({message: getError()});
-    }, 1000);
+    }, 2000);
   }
 
   errorMessage() {
