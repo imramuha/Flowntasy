@@ -1,0 +1,66 @@
+@import 'assets/styles/main.scss';
+.backoffice {
+    border-right: 30px solid map-get($colors, 'greyeggplant');
+    border-left: 30px solid map-get($colors, 'greyeggplant');
+    height: 100%;
+}
+
+.backofficeHeading {
+    margin: 100px 30px 30px;
+    font-size: 80px;
+    color: map-get($colors, 'greyeggplant');
+    float: right;
+}
+.tableBackoffice {
+    margin: 100px 30px 0;
+    width: 95% !important;
+    height: 100%;
+    flex-wrap: wrap;
+}
+
+.theadBackoffice {
+    background-color: map-get($colors, 'greyeggplant');
+    width: auto;
+    padding-bottom: 30px;
+}
+
+.trBackoffice td {
+    padding: 20px 5px;
+    color: map-get($colors, 'snow');
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    align-content: space-between;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.tbodyBackoffice td {
+    padding: 10px;
+    font-size: 11px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-bottom: 2px solid map-get($colors, 'eggplant');
+}
+
+.tbodyBackoffice a, .tbodyBackoffice button {
+    color: map-get($colors, 'eggplant');
+    height: 35px;
+    width: 35px;
+    margin: 0 auto;
+    align-content: space-between;
+    font-size: 25px !important;
+    &:hover {
+        background-color: map-get($colors, 'eggplant');
+        color: map-get($colors, 'snow');
+    }
+}
+
+.backofficeHeading.Icon {
+    float: left;
+    &:hover {
+        background-color: map-get($colors, 'eggplant');
+        color: map-get($colors, 'snow');
+        transition-duration: 0.5s;
+        border-radius: 50px;
+    }
+}

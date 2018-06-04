@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css?family=Libre+Franklin:100,200,200i,300,300i,400,400i,500,500i,600,700,800,900");
+@import url("https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700");
+.navigationVisitorSignContainer {
+  height: 60px;
+  position: absolute;
+  background-color: inherit;
+  color: #ffffff;
+  background-color: rgba(43, 28, 45, 0);
+  width: 100%;
+  padding: 5px 5% 5px 0;
+  align-items: center;
+  justify-content: space-between;
+  align-content: space-between;
+  display: flex;
+  z-index: 50; }
+  .navigationVisitorSignContainer:hover {
+    transition: 1s;
+    background-color: #2b1c2d; }
+
+@media screen and (max-width: 850px) {
+  .navigation.header {
+    margin: 0 4px; } }
+
+.logoIcon {
+  padding: 0 30px;
+  display: flex; }
+
+.logoFlowntasy {
+  padding: 15px 0;
+  width: 100%;
+  height: auto; }
+
+.flowntasyName {
+  padding: 17px 10px; }
+
+.dropbuttonSign {
+  cursor: pointer;
+  border: none;
+  color: #ffffff;
+  background-color: transparent;
+  padding: 15px 30px;
+  justify-content: flex-end; }
+
+@media screen and (max-width: 850px) {
+  .dropbuttonSign.header {
+    padding: 15px 10px;
+    font-size: 11px; } }
+
+.dropdownSign {
+  display: inline-block;
+  float: right;
+  justify-content: flex-end; }
+
+@media screen and (max-width: 500px) {
+  .dropdownSign.hide {
+    display: none; } }
+
+.dropbuttonSign.homePage {
+  width: auto; }
+
+.dropdownSign-content.header.user {
+  right: 0; }
+
+.dropdownSign-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  z-index: 1;
+  border-radius: 5px;
+  border-top: 3px solid #ffffff;
+  border-bottom: 3px solid #390D3E; }
+  .dropdownSign-content a {
+    color: #390D3E;
+    padding: 12px 16px;
+    text-decoration: none;
+    text-align: center;
+    display: block; }
+  .dropdownSign-content a:hover {
+    background-color: #390D3E;
+    color: #ffffff; }
+
+.dropdownSign:hover .dropdownSign-content {
+  display: block; }
+
+.dropdownSign:hover, .dropbuttonSign:hover {
+  color: #a9a6a2; }
+  .dropdownSign:hover .dropbuttonSign, .dropbuttonSign:hover .dropbuttonSign {
+    color: #a9a6a2; }

@@ -1,0 +1,104 @@
+// importing fonts
+@import url('https://fonts.googleapis.com/css?family=Libre+Franklin:100,200,200i,300,300i,400,400i,500,500i,600,700,800,900');
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700');
+
+// font-family
+$libre-franklin: 'Libre Franklin', sans-serif;
+$libre-baskerville: 'Libre Baskerville', serif;
+
+// font-sizes & line-heights for different screen/headings
+$title-font-sizes: (
+  null  : 25pt,
+  576px : 35pt,
+  768px : 40pt,
+  992px: 45pt,
+  1200px: 55pt,
+);
+
+$title-font-heights: (
+  null  : 90px,
+  576px : 100px,
+  768px : 120px,
+  992px: 130px,
+  1200px: 150px,
+);
+
+$h1-font-sizes: (
+  null  : 12pt,
+  576px : 14pt,
+  768px : 16pt,
+  992px: 18pt,
+  1200px: 20pt,
+);
+
+$h1-font-heights: (
+  null  : 20px,
+  576px : 25px,
+  768px : 28px,
+  992px: 32px,
+  1200px: 35px,
+);
+
+$h2-font-sizes: (
+  null  : 12pt,
+  576px : 14pt,
+  768px : 16pt,
+  992px: 17pt,
+  1200px: 18pt,
+);
+
+$h2-font-heights: (
+  null  : 18px,
+  576px : 20px,
+  768px : 25px,
+  992px: 28px,
+  1200px: 30px,
+);
+
+$h3-font-sizes: (
+  null  : 12pt,
+  576px : 14pt,
+  768px : 14pt,
+  992px:  15pt,
+  1200px: 16pt,
+);
+
+$h3-font-heights: (
+  null  : 18px,
+  576px : 20px,
+  768px : 25px,
+  992px:  28px,
+  1200px: 30px,
+);
+
+$h4-font-sizes: (
+  null  : 10pt,
+  576px : 11pt,
+  768px : 12pt,
+  992px:  12pt,
+  1200px: 13pt,
+);
+
+$h4-font-heights: (
+  null  : 16px,
+  576px : 18px,
+  768px : 23px,
+  992px:  25px,
+  1200px: 28px,
+);
+
+$p-font-sizes: (
+  null  : 8pt,
+  576px : 10pt,
+  768px : 10pt,
+  992px:  10pt,
+  1200px: 12pt,
+);
+
+$p-font-heights: (
+  null  : 13px,
+  576px : 15px,
+  768px : 18px,
+  992px:  20px,
+  1200px: 23px,
+);

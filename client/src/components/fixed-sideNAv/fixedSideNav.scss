@@ -1,0 +1,62 @@
+@import 'assets/styles/main.scss';
+
+p, li {
+    @include font-size-height($h4-font-sizes, $h4-font-heights);
+    @include font-weight(light);
+    font-family: $libre-baskerville;
+    color: map-get($colors, 'midnight');
+}
+
+.sidenav {
+    float: left;
+    width: 30%;
+    position: fixed;
+    z-index: 1;
+    padding: 90px 45px 80px 25px;
+    height: 100%;
+    background: map-get($colors, 'greymidnight');
+    overflow-x: hidden;
+    overflow:hidden;
+    @media screen and (max-width: 768px){
+       width: 100%;
+       position: relative;
+       text-align: center;
+    }
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+.sideNavActive{
+    font-weight: 600;
+    border-left: 4px solid map-get($colors, 'snow');
+    color: map-get($colors, 'snow');
+    font-size: 16px;
+    @media screen and (max-width: 768px){
+        border-top: 1px solid map-get($colors, 'snow');
+        border-bottom: 1px solid map-get($colors, 'snow');
+        border-left: none;
+        color: map-get($colors, 'snow');
+    }
+}
+
+.sideNavNotActive:hover{
+    font-weight: 600;
+    border-left: 4px solid map-get($colors, 'greycheese');
+    @include font-size-height($h4-font-sizes, $h4-font-heights);
+    color: map-get($colors, 'lightcheese');
+}
+
+.sideNavNotActive{
+    font-weight: 200;
+    @include font-size-height($p-font-sizes, $h4-font-heights);
+    color: map-get($colors, 'midnight');
+}

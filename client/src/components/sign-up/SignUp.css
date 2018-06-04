@@ -1,0 +1,351 @@
+@import url("https://fonts.googleapis.com/css?family=Libre+Franklin:100,200,200i,300,300i,400,400i,500,500i,600,700,800,900");
+@import url("https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700");
+.signContainer {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 70px 0;
+  position: fixed;
+  background: url(../../assets/videos/loginBackground.jpg) repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+.wrap {
+  width: 50%;
+  margin: 2em auto 0;
+  display: flex;
+  text-align: end; }
+
+.signTitle, .signTitle span {
+  font-size: 12pt;
+  line-height: 18px;
+  font-weight: 900;
+  text-align: center;
+  font-family: "Libre Franklin", sans-serif;
+  color: #ffffff; }
+  @media screen and (min-width: 576px) {
+    .signTitle, .signTitle span {
+      font-size: 14pt; } }
+  @media screen and (min-width: 768px) {
+    .signTitle, .signTitle span {
+      font-size: 16pt; } }
+  @media screen and (min-width: 992px) {
+    .signTitle, .signTitle span {
+      font-size: 18pt; } }
+  @media screen and (min-width: 1200px) {
+    .signTitle, .signTitle span {
+      font-size: 20pt; } }
+  @media screen and (min-width: 576px) {
+    .signTitle, .signTitle span {
+      line-height: 20px; } }
+  @media screen and (min-width: 768px) {
+    .signTitle, .signTitle span {
+      line-height: 25px; } }
+  @media screen and (min-width: 992px) {
+    .signTitle, .signTitle span {
+      line-height: 28px; } }
+  @media screen and (min-width: 1200px) {
+    .signTitle, .signTitle span {
+      line-height: 30px; } }
+
+.content-info h2, .inputSide h2 {
+  font-size: 12pt;
+  line-height: 18px;
+  font-weight: 600;
+  font-family: "Libre Franklin", sans-serif;
+  margin: 30px 0;
+  color: #2B1C2D; }
+  @media screen and (min-width: 576px) {
+    .content-info h2, .inputSide h2 {
+      font-size: 14pt; } }
+  @media screen and (min-width: 768px) {
+    .content-info h2, .inputSide h2 {
+      font-size: 14pt; } }
+  @media screen and (min-width: 992px) {
+    .content-info h2, .inputSide h2 {
+      font-size: 15pt; } }
+  @media screen and (min-width: 1200px) {
+    .content-info h2, .inputSide h2 {
+      font-size: 16pt; } }
+  @media screen and (min-width: 576px) {
+    .content-info h2, .inputSide h2 {
+      line-height: 20px; } }
+  @media screen and (min-width: 768px) {
+    .content-info h2, .inputSide h2 {
+      line-height: 25px; } }
+  @media screen and (min-width: 992px) {
+    .content-info h2, .inputSide h2 {
+      line-height: 28px; } }
+  @media screen and (min-width: 1200px) {
+    .content-info h2, .inputSide h2 {
+      line-height: 30px; } }
+
+.submitButton {
+  font-size: 10pt;
+  text-transform: uppercase;
+  line-height: 0; }
+  @media screen and (min-width: 576px) {
+    .submitButton {
+      font-size: 11pt; } }
+  @media screen and (min-width: 768px) {
+    .submitButton {
+      font-size: 12pt; } }
+  @media screen and (min-width: 992px) {
+    .submitButton {
+      font-size: 12pt; } }
+  @media screen and (min-width: 1200px) {
+    .submitButton {
+      font-size: 13pt; } }
+
+.inputSide h2 {
+  color: #ffffff;
+  text-align: center;
+  margin: -4px 0 20px;
+  padding-bottom: 38px; }
+
+.content-info h3, .errorMessage h3 {
+  font-size: 10pt;
+  line-height: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-family: "Libre Franklin", sans-serif;
+  color: #494849; }
+  @media screen and (min-width: 576px) {
+    .content-info h3, .errorMessage h3 {
+      font-size: 11pt; } }
+  @media screen and (min-width: 768px) {
+    .content-info h3, .errorMessage h3 {
+      font-size: 12pt; } }
+  @media screen and (min-width: 992px) {
+    .content-info h3, .errorMessage h3 {
+      font-size: 12pt; } }
+  @media screen and (min-width: 1200px) {
+    .content-info h3, .errorMessage h3 {
+      font-size: 13pt; } }
+  @media screen and (min-width: 576px) {
+    .content-info h3, .errorMessage h3 {
+      line-height: 18px; } }
+  @media screen and (min-width: 768px) {
+    .content-info h3, .errorMessage h3 {
+      line-height: 23px; } }
+  @media screen and (min-width: 992px) {
+    .content-info h3, .errorMessage h3 {
+      line-height: 25px; } }
+  @media screen and (min-width: 1200px) {
+    .content-info h3, .errorMessage h3 {
+      line-height: 28px; } }
+  .content-info h3:first-of-type, .errorMessage h3:first-of-type {
+    margin: 5px 0 25px 0; }
+  @media screen and (min-width: 0px) {
+    .content-info h3:first-of-type, .errorMessage h3:first-of-type {
+      margin: 5px 0 10px 0; } }
+  @media screen and (min-width: 576px) {
+    .content-info h3:first-of-type, .errorMessage h3:first-of-type {
+      margin: 60px 0 5px 0; } }
+  @media screen and (min-width: 768px) {
+    .content-info h3:first-of-type, .errorMessage h3:first-of-type {
+      margin: 45px 0 25px 0; } }
+  @media screen and (min-width: 992px) {
+    .content-info h3:first-of-type, .errorMessage h3:first-of-type {
+      margin: 40px 0 15px 0; } }
+  @media screen and (min-width: 1200px) {
+    .content-info h3:first-of-type, .errorMessage h3:first-of-type {
+      margin: 60px 0 15px 0; } }
+
+.errorMessage h3 {
+  color: #BA8B15;
+  text-align: center;
+  padding-bottom: 0px;
+  margin: 8px 0 !important; }
+
+.content-info p {
+  font-size: 8pt;
+  line-height: 13px;
+  font-weight: 300;
+  font-family: "Libre Franklin", sans-serif;
+  color: #a9a6a2; }
+  @media screen and (min-width: 576px) {
+    .content-info p {
+      font-size: 10pt; } }
+  @media screen and (min-width: 768px) {
+    .content-info p {
+      font-size: 10pt; } }
+  @media screen and (min-width: 992px) {
+    .content-info p {
+      font-size: 10pt; } }
+  @media screen and (min-width: 1200px) {
+    .content-info p {
+      font-size: 12pt; } }
+  @media screen and (min-width: 576px) {
+    .content-info p {
+      line-height: 15px; } }
+  @media screen and (min-width: 768px) {
+    .content-info p {
+      line-height: 18px; } }
+  @media screen and (min-width: 992px) {
+    .content-info p {
+      line-height: 20px; } }
+  @media screen and (min-width: 1200px) {
+    .content-info p {
+      line-height: 23px; } }
+  .content-info p:first-of-type {
+    margin: 5px 0 40px 0; }
+  @media screen and (min-width: 0px) {
+    .content-info p:first-of-type {
+      margin: 10px 0 50px 0; } }
+  @media screen and (min-width: 667px) {
+    .content-info p:first-of-type {
+      margin: 10px 0 60px 0; } }
+  @media screen and (min-width: 992px) {
+    .content-info p:first-of-type {
+      margin: 10px 0 70px 0; } }
+  @media screen and (min-width: 1200px) {
+    .content-info p:first-of-type {
+      margin: 10px 0 35px 0; } }
+
+.content-info {
+  padding: 1em 3em;
+  text-align: center; }
+
+.socialLinks {
+  display: flex;
+  justify-content: space-between;
+  align-content: space-between; }
+
+.socialLinks a i.fab {
+  width: 30px;
+  height: 30px;
+  border-radius: 3px;
+  line-height: 29px;
+  background: none;
+  border: solid 2px #2B1C2D;
+  background: #ffffff;
+  color: #390D3E;
+  transition: 0.5s all;
+  -webkit-transition: 0.5s all;
+  -moz-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  -ms-transition: 0.5s all; }
+
+.socialLinks a i.fab:hover {
+  color: #ffffff;
+  border: solid 2px #2B1C2D;
+  background-color: #2B1C2D; }
+
+.content-info p a {
+  text-decoration: none;
+  color: #390D3E; }
+  .content-info p a:hover {
+    font-weight: 500; }
+
+.content-left {
+  width: 50%;
+  background: #FFFFFF; }
+
+.content-main {
+  width: 50%; }
+
+.inputSide {
+  background: rgba(0, 0, 0, 0.56);
+  padding: 3em;
+  min-height: 426px; }
+
+.inputSide input[type="email"], .inputSide input[type="username"], .inputSide input[type="password"] {
+  outline: none;
+  padding: 1em;
+  background: none;
+  border: 1px solid #ffffff;
+  color: #FFFFFF;
+  font-size: .9em;
+  margin: 0 0 1.5em 0;
+  width: 93%; }
+
+.inputSide input[type="submit"] {
+  color: #ffffffbf;
+  letter-spacing: 3px;
+  padding: 1em;
+  text-align: center;
+  cursor: pointer;
+  background: none;
+  border: solid 1px #ffffff;
+  transition: 1s all;
+  -webkit-transition: 1s all;
+  -o-transition: 1s all;
+  -moz-transition: 1s all;
+  -ms-transition: 1s all;
+  width: 50%; }
+
+.inputSide input[type="submit"]:hover {
+  background-color: #6622703c;
+  border: solid 1px #ffffff; }
+
+@media (max-width: 1440px) {
+  .wrap {
+    width: 55%; } }
+
+@media (max-width: 1366px) {
+  .wrap {
+    width: 65%; } }
+
+@media (max-width: 991px) {
+  .wrap {
+    width: 70%; } }
+
+@media (max-width: 900px) {
+  .wrap {
+    width: 80%; } }
+
+@media (max-width: 800px) {
+  .inputSide {
+    min-height: 445px; } }
+
+@media (max-width: 768px) {
+  .wrap {
+    width: 90%; } }
+
+@media (max-width: 667px) {
+  .signContainer {
+    position: relative; }
+  .content-left {
+    margin-left: auto;
+    transform: translateY(128%);
+    margin-right: auto;
+    width: 80%; }
+  .content-main {
+    width: 80%;
+    margin-left: auto;
+    transform: translateY(-80%);
+    margin-right: auto; }
+  .inputSide {
+    min-height: 425px; }
+  .wrap {
+    width: 80%;
+    display: block; } }
+
+@media (max-width: 499px) {
+  .content-left {
+    transform: translateY(150%); }
+  .content-main {
+    transform: translateY(-68%); } }
+
+@media (max-width: 435px) {
+  .inputSide input[type="email"], .inputSide input[type="text"], .inputSide input[type="password"] {
+    width: 89%; }
+  .content-info {
+    padding: 3em 2em; }
+  .inputSide {
+    padding: 2em; }
+  .content-left {
+    transform: translateY(110%); }
+  .content-main {
+    transform: translateY(-90%); } }
+
+@media (max-width: 320px) {
+  .wrap {
+    width: 90%; }
+  .content-info {
+    padding: 2em 1em; }
+  .inputSide input[type="email"], .inputSide input[type="text"], .inputSide input[type="password"] {
+    width: 86%; } }

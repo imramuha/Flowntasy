@@ -1,0 +1,339 @@
+@import url("https://fonts.googleapis.com/css?family=Libre+Franklin:100,200,200i,300,300i,400,400i,500,500i,600,700,800,900");
+@import url("https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700");
+.homePage {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%; }
+
+.hPage .navigationVisitorSignContainer:hover {
+  transition: 1s;
+  background-color: transparent; }
+
+.hPage .navigationVisitorSignContainer .dropdownSign:hover, .hPage .navigationVisitorSignContainer .dropbuttonSign:hover {
+  color: #191919; }
+
+.hPage .navigationVisitorSignContainer .dropdownSign:hover, .hPage .navigationVisitorSignContainer .dropbuttonSign:hover {
+  color: #191919; }
+  .hPage .navigationVisitorSignContainer .dropdownSign:hover .dropbuttonSign, .hPage .navigationVisitorSignContainer .dropbuttonSign:hover .dropbuttonSign {
+    color: #191919; }
+
+.hPage .navigationVisitorSignContainer .dropdownSign-content a {
+  color: #191919; }
+
+.hPage .navigationVisitorSignContainer .dropdownSign-content a:hover {
+  background-color: #191919;
+  color: #ffffff; }
+
+.homePage h1, .homePage span {
+  font-size: 25pt;
+  line-height: 90px;
+  font-weight: 900;
+  font-family: "Libre Franklin", sans-serif; }
+  @media screen and (min-width: 576px) {
+    .homePage h1, .homePage span {
+      font-size: 35pt; } }
+  @media screen and (min-width: 768px) {
+    .homePage h1, .homePage span {
+      font-size: 40pt; } }
+  @media screen and (min-width: 992px) {
+    .homePage h1, .homePage span {
+      font-size: 45pt; } }
+  @media screen and (min-width: 1200px) {
+    .homePage h1, .homePage span {
+      font-size: 55pt; } }
+  @media screen and (min-width: 576px) {
+    .homePage h1, .homePage span {
+      line-height: 100px; } }
+  @media screen and (min-width: 768px) {
+    .homePage h1, .homePage span {
+      line-height: 120px; } }
+  @media screen and (min-width: 992px) {
+    .homePage h1, .homePage span {
+      line-height: 130px; } }
+  @media screen and (min-width: 1200px) {
+    .homePage h1, .homePage span {
+      line-height: 150px; } }
+
+.homePage h2 {
+  font-size: 12pt;
+  line-height: 20px;
+  font-weight: 300;
+  font-family: "Libre Franklin", sans-serif; }
+  @media screen and (min-width: 576px) {
+    .homePage h2 {
+      font-size: 14pt; } }
+  @media screen and (min-width: 768px) {
+    .homePage h2 {
+      font-size: 16pt; } }
+  @media screen and (min-width: 992px) {
+    .homePage h2 {
+      font-size: 18pt; } }
+  @media screen and (min-width: 1200px) {
+    .homePage h2 {
+      font-size: 20pt; } }
+  @media screen and (min-width: 576px) {
+    .homePage h2 {
+      line-height: 25px; } }
+  @media screen and (min-width: 768px) {
+    .homePage h2 {
+      line-height: 28px; } }
+  @media screen and (min-width: 992px) {
+    .homePage h2 {
+      line-height: 32px; } }
+  @media screen and (min-width: 1200px) {
+    .homePage h2 {
+      line-height: 35px; } }
+
+.homePage h3, .dropbutton.homePage, .dropbuttonSign.homePage, .logoIcon {
+  font-size: 12pt;
+  line-height: 18px;
+  font-weight: 300;
+  font-family: "Libre Franklin", sans-serif; }
+  @media screen and (min-width: 576px) {
+    .homePage h3, .dropbutton.homePage, .dropbuttonSign.homePage, .logoIcon {
+      font-size: 14pt; } }
+  @media screen and (min-width: 768px) {
+    .homePage h3, .dropbutton.homePage, .dropbuttonSign.homePage, .logoIcon {
+      font-size: 16pt; } }
+  @media screen and (min-width: 992px) {
+    .homePage h3, .dropbutton.homePage, .dropbuttonSign.homePage, .logoIcon {
+      font-size: 17pt; } }
+  @media screen and (min-width: 1200px) {
+    .homePage h3, .dropbutton.homePage, .dropbuttonSign.homePage, .logoIcon {
+      font-size: 18pt; } }
+  @media screen and (min-width: 576px) {
+    .homePage h3, .dropbutton.homePage, .dropbuttonSign.homePage, .logoIcon {
+      line-height: 20px; } }
+  @media screen and (min-width: 768px) {
+    .homePage h3, .dropbutton.homePage, .dropbuttonSign.homePage, .logoIcon {
+      line-height: 25px; } }
+  @media screen and (min-width: 992px) {
+    .homePage h3, .dropbutton.homePage, .dropbuttonSign.homePage, .logoIcon {
+      line-height: 28px; } }
+  @media screen and (min-width: 1200px) {
+    .homePage h3, .dropbutton.homePage, .dropbuttonSign.homePage, .logoIcon {
+      line-height: 30px; } }
+
+.cube {
+  background: #191919;
+  width: 12px;
+  height: 8px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 1px;
+  position: absolute;
+  transform-origin: top left;
+  transform: scale(0) rotate(0deg) translate(-50%, -50%);
+  animation: cube 24s ease-in forwards infinite; }
+  .cube:before {
+    content: "";
+    position: absolute;
+    right: 100%;
+    top: 2px;
+    width: 0;
+    height: 0;
+    border-top: 1px solid transparent;
+    border-right: 2px solid #191919;
+    border-bottom: 1px solid transparent; }
+  .cube:nth-child(2n) {
+    border-color: #a9a6a2; }
+  .cube:nth-child(2) {
+    animation-delay: 2s;
+    left: 70vh;
+    top: 80vh; }
+  .cube:nth-child(3) {
+    animation-delay: 0s;
+    left: 75vw;
+    top: 53vh; }
+  .cube:nth-child(4) {
+    animation-delay: 12s;
+    left: 90vw;
+    top: 10vh; }
+  .cube:nth-child(5) {
+    animation-delay: 18s;
+    left: 10vw;
+    top: 85vh; }
+  .cube:nth-child(6) {
+    animation-delay: 24s;
+    left: 50vw;
+    top: 10vh; }
+
+@keyframes cube {
+  from {
+    transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    opacity: 0.2; }
+  to {
+    transform: scale(20) rotate(960deg) translate(-50%, -50%);
+    opacity: 0; } }
+
+.frame {
+  width: 100vW;
+  height: 100vH;
+  max-width: 100vW;
+  max-height: 100vH;
+  min-width: 100vW;
+  min-height: 100vH;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.scanlines {
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.3) 70%, rgba(255, 255, 255, 0.75));
+  background-size: 0.5rem 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.15; }
+
+.scanlines::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+h1 span {
+  animation: crt-blink 1s infinite; }
+
+@keyframes crt-blink {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 0; }
+  50.1% {
+    opacity: 1; }
+  100% {
+    opacity: 1; } }
+
+/* Style the video: 100% width and height to cover the entire window */
+.backgroundVideo {
+  z-index: -1;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(10px);
+  transform: scale(1.03); }
+
+.backgroundImg {
+  z-index: -2;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background: url("../../assets/videos/backgroundVidSnapshot.jpg") center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  min-height: 100%;
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+  transform: scale(1.03); }
+
+/* Add some content at the bottom of the video/page */
+.homePageContent {
+  bottom: 0;
+  background: transparent;
+  color: #ffffff;
+  width: 60%;
+  height: 100%;
+  text-align: center;
+  vertical-align: middle;
+  z-index: 5; }
+  @media screen and (min-width: 0px) {
+    .homePageContent {
+      padding: 20% 0; } }
+  @media screen and (min-width: 576px) {
+    .homePageContent {
+      padding: 10% 0; } }
+  @media screen and (min-width: 768px) {
+    .homePageContent {
+      padding: 7% 0; } }
+  @media screen and (min-width: 992px) {
+    .homePageContent {
+      padding: 5% 0; } }
+  @media screen and (min-width: 1200px) {
+    .homePageContent {
+      padding: 2% 0; } }
+
+.loginButton, .registerButton {
+  font-size: 12pt;
+  line-height: 18px;
+  font-weight: 300;
+  width: 210px;
+  padding: 0.35em 1.2em;
+  border: 0.03em solid #ffffff;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  text-align: center;
+  background: #191919;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Libre Franklin", sans-serif;
+  transition: all 0.8s; }
+  @media screen and (min-width: 576px) {
+    .loginButton, .registerButton {
+      font-size: 14pt; } }
+  @media screen and (min-width: 768px) {
+    .loginButton, .registerButton {
+      font-size: 16pt; } }
+  @media screen and (min-width: 992px) {
+    .loginButton, .registerButton {
+      font-size: 17pt; } }
+  @media screen and (min-width: 1200px) {
+    .loginButton, .registerButton {
+      font-size: 18pt; } }
+  @media screen and (min-width: 576px) {
+    .loginButton, .registerButton {
+      line-height: 20px; } }
+  @media screen and (min-width: 768px) {
+    .loginButton, .registerButton {
+      line-height: 25px; } }
+  @media screen and (min-width: 992px) {
+    .loginButton, .registerButton {
+      line-height: 28px; } }
+  @media screen and (min-width: 1200px) {
+    .loginButton, .registerButton {
+      line-height: 30px; } }
+  @media screen and (min-width: 0px) {
+    .loginButton, .registerButton {
+      width: 150px;
+      border: 0.07em solid #ffffff;
+      margin: 1em 1em; } }
+  @media screen and (min-width: 576px) {
+    .loginButton, .registerButton {
+      width: 130px;
+      margin: 3em 1em; } }
+  @media screen and (min-width: 768px) {
+    .loginButton, .registerButton {
+      width: 165px;
+      margin: 2.5em 1.5em; } }
+  @media screen and (min-width: 992px) {
+    .loginButton, .registerButton {
+      width: 190px;
+      margin: 2em; } }
+  @media screen and (min-width: 1200px) {
+    .loginButton, .registerButton {
+      width: 200px;
+      margin: 1.5em 2em; } }
+
+.loginButton:hover, .registerButton:hover {
+  background: #ffffff;
+  color: #191919; }

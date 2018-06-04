@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css?family=Libre+Franklin:100,200,200i,300,300i,400,400i,500,500i,600,700,800,900");
+@import url("https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700");
+p, li {
+  font-size: 10pt;
+  line-height: 16px;
+  font-weight: 300;
+  font-family: "Libre Baskerville", serif;
+  color: #494849; }
+  @media screen and (min-width: 576px) {
+    p, li {
+      font-size: 11pt; } }
+  @media screen and (min-width: 768px) {
+    p, li {
+      font-size: 12pt; } }
+  @media screen and (min-width: 992px) {
+    p, li {
+      font-size: 12pt; } }
+  @media screen and (min-width: 1200px) {
+    p, li {
+      font-size: 13pt; } }
+  @media screen and (min-width: 576px) {
+    p, li {
+      line-height: 18px; } }
+  @media screen and (min-width: 768px) {
+    p, li {
+      line-height: 23px; } }
+  @media screen and (min-width: 992px) {
+    p, li {
+      line-height: 25px; } }
+  @media screen and (min-width: 1200px) {
+    p, li {
+      line-height: 28px; } }
+
+.sidenav {
+  float: left;
+  width: 30%;
+  position: fixed;
+  z-index: 1;
+  padding: 90px 45px 80px 25px;
+  height: 100%;
+  background: #191919;
+  overflow-x: hidden;
+  overflow: hidden; }
+  @media screen and (max-width: 768px) {
+    .sidenav {
+      width: 100%;
+      position: relative;
+      text-align: center; } }
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  display: block; }
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px; }
+  .sidenav a {
+    font-size: 18px; } }
+
+.sideNavActive {
+  font-weight: 600;
+  border-left: 4px solid #ffffff;
+  color: #ffffff;
+  font-size: 16px; }
+  @media screen and (max-width: 768px) {
+    .sideNavActive {
+      border-top: 1px solid #ffffff;
+      border-bottom: 1px solid #ffffff;
+      border-left: none;
+      color: #ffffff; } }
+
+.sideNavNotActive:hover {
+  font-weight: 600;
+  border-left: 4px solid #BA8B15;
+  font-size: 10pt;
+  line-height: 16px;
+  color: #FFD97B; }
+  @media screen and (min-width: 576px) {
+    .sideNavNotActive:hover {
+      font-size: 11pt; } }
+  @media screen and (min-width: 768px) {
+    .sideNavNotActive:hover {
+      font-size: 12pt; } }
+  @media screen and (min-width: 992px) {
+    .sideNavNotActive:hover {
+      font-size: 12pt; } }
+  @media screen and (min-width: 1200px) {
+    .sideNavNotActive:hover {
+      font-size: 13pt; } }
+  @media screen and (min-width: 576px) {
+    .sideNavNotActive:hover {
+      line-height: 18px; } }
+  @media screen and (min-width: 768px) {
+    .sideNavNotActive:hover {
+      line-height: 23px; } }
+  @media screen and (min-width: 992px) {
+    .sideNavNotActive:hover {
+      line-height: 25px; } }
+  @media screen and (min-width: 1200px) {
+    .sideNavNotActive:hover {
+      line-height: 28px; } }
+
+.sideNavNotActive {
+  font-weight: 200;
+  font-size: 8pt;
+  line-height: 16px;
+  color: #494849; }
+  @media screen and (min-width: 576px) {
+    .sideNavNotActive {
+      font-size: 10pt; } }
+  @media screen and (min-width: 768px) {
+    .sideNavNotActive {
+      font-size: 10pt; } }
+  @media screen and (min-width: 992px) {
+    .sideNavNotActive {
+      font-size: 10pt; } }
+  @media screen and (min-width: 1200px) {
+    .sideNavNotActive {
+      font-size: 12pt; } }
+  @media screen and (min-width: 576px) {
+    .sideNavNotActive {
+      line-height: 18px; } }
+  @media screen and (min-width: 768px) {
+    .sideNavNotActive {
+      line-height: 23px; } }
+  @media screen and (min-width: 992px) {
+    .sideNavNotActive {
+      line-height: 25px; } }
+  @media screen and (min-width: 1200px) {
+    .sideNavNotActive {
+      line-height: 28px; } }

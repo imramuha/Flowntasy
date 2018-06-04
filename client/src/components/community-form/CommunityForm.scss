@@ -1,0 +1,115 @@
+@import 'assets/styles/Main.scss';
+
+.createFormContainer {
+    margin-top: 30px;
+}
+.createForm, .createFormContainer h1 {
+    width: 50%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    @media screen and (max-width: 786px) {
+        width: 70%;
+    }
+}
+
+.createForm {
+    margin-top: 50px 0 50px;
+    background-color: rgba(255, 255, 255, 0.111);
+    padding: 10px 20px;
+}
+/*
+@include font-size-height($h3-font-sizes, $h3-font-heights);
+  @include font-weight(semi-bold);
+  font-family: $libre-franklin;
+  margin: 30px 0;
+  color: map-get($colors, 'greyeggplant');*/
+select.inputFields {
+    width: 100%;
+    height: auto;
+    margin: 10px 0;
+    padding: 5px;
+    background-color: inherit;
+    font-size: 15px;
+    color: inherit;
+}
+
+.createForm label {
+    @include font-size-height($h4-font-sizes, $h4-font-heights);
+    @include font-weight(semi-bold);  
+    margin: 10px 0; 
+    font-family: $libre-franklin;
+    color: map-get($colors, 'snow');
+}
+
+label {
+    margin: 50px 0; 
+}
+
+.createForm textarea, .createForm input {
+    color: rgba(237, 206, 206, 0.693);
+    padding: 30px 5px 5px; 
+    font-size: 12px;
+    font-family: $libre-franklin;
+}
+
+.createForm select {
+    color: map-get($colors, 'lilac');
+    font-family: $libre-franklin;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 15px;
+}
+
+
+.createFormContainer h1 {
+    text-align: center;
+    @include font-size-height($h1-font-sizes, $h1-font-heights);
+    @include font-weight(semi-bold);
+    font-family: $libre-franklin;
+    color: map-get($colors, 'snow');
+}
+
+@keyframes AnimationName { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+.backgroundCreateForm {
+    width: 100%;
+    height:100vh;
+    background: linear-gradient(270deg, #200614, #5c003c, #44445c);
+    background-size: 600% 600%;
+
+    -webkit-animation: AnimationName 46s ease infinite;
+    -moz-animation: AnimationName 46s ease infinite;
+    animation: AnimationName 46s ease infinite;
+
+    @-webkit-keyframes AnimationName {
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+    }
+    @-moz-keyframes AnimationName {
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+    }
+    @keyframes AnimationName { 
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+    }
+}
+
+.createForm .submitButton {
+    background-color: map-get($colors, 'greyeggplant');
+    color: map-get($colors, 'snow');
+    &:hover {
+        color: map-get($colors, 'greyeggplant');
+        background-color: map-get($colors, 'snow');
+        transition: 1s;
+    }
+}

@@ -1,0 +1,74 @@
+// font-size mixin
+@mixin font-size($fs-map, $fs-breakpoints: $breakpoints ) {
+    @each $fs-breakpoint, $fs-font-size in $fs-map {
+      @if $fs-breakpoint == null {
+        font-size: $fs-font-size;
+      }
+      @else {
+        // If $fs-font-size is a key that exists in
+        // $fs-breakpoints, use the value
+        @if map-has-key($fs-breakpoints, $fs-breakpoint) {
+          $fs-breakpoint: map-get($fs-breakpoints, $fs-breakpoint);
+        }
+        @media screen and (min-width: $fs-breakpoint) {
+          font-size: $fs-font-size;
+        }
+      }
+    }
+}
+
+@mixin font-height($fs-map, $fs-breakpoints: $breakpoints ) {
+  @each $fs-breakpoint, $fs-font-height in $fs-map {
+    @if $fs-breakpoint == null {
+      line-height: $fs-font-height;
+    }
+    @else {
+      // If $fs-font-size is a key that exists in
+      // $fs-breakpoints, use the value
+      @if map-has-key($fs-breakpoints, $fs-breakpoint) {
+        $fs-breakpoint: map-get($fs-breakpoints, $fs-breakpoint);
+      }
+      @media screen and (min-width: $fs-breakpoint) {
+        line-height: $fs-font-height;
+      }
+    }
+  }
+}
+
+@mixin font-size-height($sizeValue, $heightValue) {
+  @include font-size($sizeValue);
+  @include font-height($heightValue);
+}
+
+
+// font-weight mixin
+@mixin font-weight($weight) {
+    $weights: (
+      thin: 100,
+      extra-light: 200,
+      ultra-light: 200,
+      light: 300,
+      normal: 400,
+      book: 400,
+      regular: 400,
+      medium: 500,
+      semi-bold: 600,
+      demi-bold: 600,
+      bold: 700,
+      extra-bold: 800,
+      ultra-bold: 900,
+      heavy: 900,
+      black: 900,
+      ultra: 900,
+      ultra-black: 900,
+      extra-ultra: 900
+    );
+    
+    $output: $weight;
+    @if map-has-key($weights, $weight) {
+      $output: map-get($weights, $weight);
+    }
+    
+    font-weight: $output;
+}
+  

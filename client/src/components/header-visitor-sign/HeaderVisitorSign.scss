@@ -1,0 +1,109 @@
+@import 'assets/styles/main.scss';
+
+.navigationVisitorSignContainer {
+    height: 60px;
+    position: absolute;
+    background-color: inherit;
+    color: map-get($colors, 'snow');
+    background-color: rgba(map-get($colors, 'greyeggplant'), 0);
+    width: 100%;
+    padding: 5px 5% 5px 0;
+    align-items: center;
+    justify-content: space-between;
+    align-content: space-between;
+    display: flex;
+    z-index: 50;
+    &:hover {
+        transition: 1s;
+        background-color: rgba(map-get($colors, 'greyeggplant'), 1); 
+    }
+}
+
+.navigation.header {
+    @media screen and (max-width: 850px) {
+        margin: 0 4px;
+    }
+}
+
+.logoIcon {
+    padding: 0 30px;
+    display: flex;
+}
+
+.logoFlowntasy {
+    padding: 15px 0;
+    width: 100%;
+    height: auto;
+}
+
+.flowntasyName {
+    padding: 17px 10px;
+}
+
+.dropbuttonSign {
+    cursor: pointer;
+    border: none;
+    color: map-get($colors, 'snow');
+    background-color: transparent;
+    padding: 15px 30px;    
+    justify-content: flex-end;
+}
+
+.dropbuttonSign.header {
+    @media screen and (max-width: 850px) {
+        padding: 15px 10px;   
+        font-size: 11px;
+    }
+}
+
+.dropdownSign {
+    display: inline-block;
+    float: right;  
+    justify-content: flex-end;
+}
+
+.dropdownSign.hide {
+    @media screen and(max-width: 500px) {
+        display: none;
+    }
+}
+
+.dropbuttonSign.homePage {
+    width: auto;
+}
+
+.dropdownSign-content.header.user {
+    right: 0;
+}
+
+.dropdownSign-content {
+    display: none;
+    position: absolute;
+    background-color: map-get($colors, 'snow');
+    z-index: 1;
+    border-radius: 5px;
+    border-top: 3px solid map-get($colors, 'snow');
+    border-bottom: 3px solid map-get($colors, 'eggplant');
+    a {
+        color: map-get($colors, 'eggplant');
+        padding: 12px 16px;
+        text-decoration: none;
+        text-align: center;
+        display: block;
+    }    
+    a:hover {
+        background-color: map-get($colors, 'eggplant');
+        color: map-get($colors, 'snow');
+    }    
+}
+
+.dropdownSign:hover .dropdownSign-content {
+    display: block;
+}
+
+.dropdownSign:hover, .dropbuttonSign:hover {
+    color: map-get($colors, 'lightmidnight');
+    .dropbuttonSign {
+        color: map-get($colors, 'lightmidnight');
+     }
+}

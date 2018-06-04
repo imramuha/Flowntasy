@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css?family=Libre+Franklin:100,200,200i,300,300i,400,400i,500,500i,600,700,800,900");
+@import url("https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700");
+.createFormContainer {
+  margin-top: 30px; }
+
+.createForm, .createFormContainer h1 {
+  width: 50%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto; }
+  @media screen and (max-width: 786px) {
+    .createForm, .createFormContainer h1 {
+      width: 70%; } }
+
+.createForm {
+  margin-top: 50px 0 50px;
+  background-color: rgba(255, 255, 255, 0.111);
+  padding: 10px 20px; }
+
+/*
+@include font-size-height($h3-font-sizes, $h3-font-heights);
+  @include font-weight(semi-bold);
+  font-family: $libre-franklin;
+  margin: 30px 0;
+  color: map-get($colors, 'greyeggplant');*/
+select.inputFields {
+  width: 100%;
+  height: auto;
+  margin: 10px 0;
+  padding: 5px;
+  background-color: inherit;
+  font-size: 15px;
+  color: inherit; }
+
+.createForm label {
+  font-size: 10pt;
+  line-height: 16px;
+  font-weight: 600;
+  margin: 10px 0;
+  font-family: "Libre Franklin", sans-serif;
+  color: #ffffff; }
+  @media screen and (min-width: 576px) {
+    .createForm label {
+      font-size: 11pt; } }
+  @media screen and (min-width: 768px) {
+    .createForm label {
+      font-size: 12pt; } }
+  @media screen and (min-width: 992px) {
+    .createForm label {
+      font-size: 12pt; } }
+  @media screen and (min-width: 1200px) {
+    .createForm label {
+      font-size: 13pt; } }
+  @media screen and (min-width: 576px) {
+    .createForm label {
+      line-height: 18px; } }
+  @media screen and (min-width: 768px) {
+    .createForm label {
+      line-height: 23px; } }
+  @media screen and (min-width: 992px) {
+    .createForm label {
+      line-height: 25px; } }
+  @media screen and (min-width: 1200px) {
+    .createForm label {
+      line-height: 28px; } }
+
+label {
+  margin: 50px 0; }
+
+.createForm textarea, .createForm input {
+  color: rgba(237, 206, 206, 0.693);
+  padding: 30px 5px 5px;
+  font-size: 12px;
+  font-family: "Libre Franklin", sans-serif; }
+
+.createForm select {
+  color: #C170B1;
+  font-family: "Libre Franklin", sans-serif;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 15px; }
+
+.createFormContainer h1 {
+  text-align: center;
+  font-size: 12pt;
+  line-height: 20px;
+  font-weight: 600;
+  font-family: "Libre Franklin", sans-serif;
+  color: #ffffff; }
+  @media screen and (min-width: 576px) {
+    .createFormContainer h1 {
+      font-size: 14pt; } }
+  @media screen and (min-width: 768px) {
+    .createFormContainer h1 {
+      font-size: 16pt; } }
+  @media screen and (min-width: 992px) {
+    .createFormContainer h1 {
+      font-size: 18pt; } }
+  @media screen and (min-width: 1200px) {
+    .createFormContainer h1 {
+      font-size: 20pt; } }
+  @media screen and (min-width: 576px) {
+    .createFormContainer h1 {
+      line-height: 25px; } }
+  @media screen and (min-width: 768px) {
+    .createFormContainer h1 {
+      line-height: 28px; } }
+  @media screen and (min-width: 992px) {
+    .createFormContainer h1 {
+      line-height: 32px; } }
+  @media screen and (min-width: 1200px) {
+    .createFormContainer h1 {
+      line-height: 35px; } }
+
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
+
+.backgroundCreateForm {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(270deg, #200614, #5c003c, #44445c);
+  background-size: 600% 600%;
+  -webkit-animation: AnimationName 46s ease infinite;
+  -moz-animation: AnimationName 46s ease infinite;
+  animation: AnimationName 46s ease infinite; }
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
+
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
+
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
+
+.createForm .submitButton {
+  background-color: #2B1C2D;
+  color: #ffffff; }
+  .createForm .submitButton:hover {
+    color: #2B1C2D;
+    background-color: #ffffff;
+    transition: 1s; }

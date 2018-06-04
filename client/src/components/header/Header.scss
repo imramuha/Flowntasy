@@ -1,0 +1,104 @@
+@import 'assets/styles/main.scss';
+
+.navigationContainer {
+    height: 60px;
+    display: flex;
+    background-color: map-get($colors, 'greyeggplant');
+    color: map-get($colors, 'snow');
+    width: 100%;
+    position: static;
+}
+
+.navigation {
+    margin: 0px 30px;
+    padding: 0 24px;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    position: relative;
+}
+
+
+.logo {
+    align-items: center;
+    margin: 0 auto;
+}
+
+.flowButton {
+    cursor: pointer;
+    color: map-get($colors, 'snow');
+    background-color: transparent;
+    border: 1px solid map-get($colors, 'snow');
+    background-color: map-get($colors, 'greyeggplant');
+    //background-color: map-get($colors, 'lilac');
+    //background-color: map-get($colors, 'midnight');
+    //background-color: map-get($colors, 'greylilac');
+    color: map-get($colors, 'snow');
+    padding: 8px 50px;
+    @media screen and (max-width: 750px) {
+        display:none;
+    }
+    a {
+        text-decoration: none;
+        color: map-get($colors, 'snow');
+    }
+}
+.flowButton:hover {
+    background-color: map-get($colors, 'eggplant');
+    border-radius: 30px;
+    transition: .5s;
+}
+  
+.flowButton:active {
+    background-color: map-get($colors, 'lightlilac');
+    color: map-get($colors, 'eggplant');
+    transition: .5s;
+}
+  
+.flowButton:focus {
+    outline: none;
+}
+
+.fieldinput{
+    text-align: center
+}
+
+.searchBar {
+    text-align: left;
+    border-radius: 30px;
+    border: 1px solid rgb(160, 160, 160);
+    padding: 7px 38px 7px 15px;
+    font-family: roboto;
+    transition: .5s;
+}  
+
+.searchBar:focus{
+    outline: none;
+    border-color: map-get($colors, 'eggplant');
+    transition: .5s;
+}
+  
+.searchIcon:before {
+    content: '';
+    color: map-get($colors, 'eggplant');
+    cursor: pointer;
+    position: relative;
+    font-family: fontawesome;
+    top: 0;
+    right: 1.5rem;
+}
+
+.title {
+    cursor: pointer;
+    margin: 0 20px;
+}
+
+.dropbuttonBurger {
+    color: map-get($colors, 'snow');
+    background-color: map-get($colors, 'greyeggplant');
+    font-size: 30px;
+    border: none;
+    a {
+        font-size: 15px;
+    }
+}

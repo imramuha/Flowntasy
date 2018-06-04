@@ -1,0 +1,286 @@
+@import 'assets/styles/main.scss';
+
+.signContainer {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 70px 0;
+  position: fixed;
+  background: url(../../assets/videos/loginBackground.jpg) repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.wrap {
+  width: 50%;
+  margin: 2em auto 0;
+  display: flex;
+  text-align: end;
+}
+
+.signTitle, .signTitle span{
+  @include font-size-height($h1-font-sizes, $h2-font-heights);
+  @include font-weight(heavy);
+  text-align: center;
+  font-family: $libre-franklin;
+  color: map-get($colors, 'snow');
+}
+
+.content-info h2, .inputSide h2, {
+  @include font-size-height($h3-font-sizes, $h3-font-heights);
+  @include font-weight(semi-bold);
+  font-family: $libre-franklin;
+  margin: 30px 0;
+  color: map-get($colors, 'greyeggplant');
+}
+
+.submitButton {
+  @include font-size($h4-font-sizes);
+  text-transform: uppercase;
+  line-height: 0;
+}
+
+.inputSide h2{
+  color: map-get($colors, 'snow');
+  text-align: center;
+  margin: -4px 0 20px;
+  padding-bottom: 38px;
+}
+.content-info h3, .errorMessage h3 {
+  @include font-size-height($h4-font-sizes, $h4-font-heights);
+  @include font-weight(medium);
+  text-transform: uppercase;
+  font-family: $libre-franklin;
+  color: map-get($colors, 'midnight');
+  &:first-of-type{
+    margin: 5px 0 25px 0;
+  }
+  @media screen and (min-width: 0px) {
+    &:first-of-type{
+      margin: 5px 0 10px 0;
+    }
+  } 
+  @media screen and (min-width: 576px) {
+    &:first-of-type{
+      margin: 60px 0 5px 0;
+    }
+  } 
+  @media screen and (min-width: 768px) {
+    &:first-of-type{
+      margin: 45px 0 25px 0;
+    }
+  }
+  @media screen and (min-width: 992px) {
+    &:first-of-type{
+      margin: 40px 0 15px 0;
+    }
+  } 
+  @media screen and (min-width: 1200px) {
+    &:first-of-type{
+      margin: 60px 0 15px 0;
+    }
+  }
+}
+
+.errorMessage h3 {
+  color: map-get($colors, 'greycheese');
+  text-align: center;
+  padding-bottom: 0px;
+  margin: 8px 0 !important;
+}
+
+
+.content-info p {
+  @include font-size-height($p-font-sizes, $p-font-heights);
+  @include font-weight(light);
+  font-family: $libre-franklin;
+  color: map-get($colors, 'lightmidnight');
+  &:first-of-type{
+    margin: 5px 0 40px 0;
+  }
+  @media screen and (min-width: 0px) {
+    &:first-of-type{
+      margin: 10px 0 50px 0;
+    }
+  } 
+  @media screen and (min-width: 667px) {
+    &:first-of-type{
+      margin: 10px 0 60px 0;
+    }
+  } 
+  @media screen and (min-width: 992px) {
+    &:first-of-type{
+      margin: 10px 0 70px 0;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    &:first-of-type{
+      margin: 10px 0 35px 0;
+    }
+  }
+}
+
+.content-info {
+  padding: 1em 3em;
+  text-align: center;
+}
+
+.socialLinks {
+  display: flex;
+  justify-content: space-between;
+  align-content: space-between;
+}
+  
+
+.socialLinks a i.fab {
+  width: 30px;
+  height: 30px;
+  border-radius: 3px;
+  line-height: 29px;
+  background: none;
+  border: solid 2px map-get($colors, 'greyeggplant');
+  background: map-get($colors, 'snow');
+  color: map-get($colors, 'eggplant');
+  transition: 0.5s all;
+  -webkit-transition: 0.5s all;
+  -moz-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  -ms-transition: 0.5s all; 
+}
+
+.socialLinks a i.fab:hover {
+
+  color: map-get($colors, 'snow');
+  border: solid 2px  map-get($colors, 'greyeggplant');
+  background-color: map-get($colors, 'greyeggplant');
+}
+
+.content-info p a {
+  text-decoration: none;
+  color: map-get($colors, 'eggplant');
+  &:hover {
+    font-weight: 500;
+  }
+}
+  
+  .content-left {
+    width: 50%;
+    background: #FFFFFF; 
+  }
+  
+  .content-main {
+    width: 50%; }
+  
+  .inputSide {
+    background: rgba(0, 0, 0, 0.56);
+    padding: 3em;
+    min-height: 426px; }
+  
+  .inputSide input[type="email"], .inputSide input[type="username"], .inputSide input[type="password"] {
+    outline: none;
+    padding: 1em;
+    background: none;
+    border: 1px solid #ffffff;
+    color: #FFFFFF;
+    font-size: .9em;
+    margin: 0 0 1.5em 0;
+    width: 93%; }
+  
+  .inputSide input[type="submit"] {
+    color:#ffffffbf;
+    letter-spacing: 3px;
+    padding: 1em;
+    text-align: center;
+    cursor: pointer;
+    background: none;
+    border: solid 1px map-get($colors, 'snow');
+    transition: 1s all;
+    -webkit-transition: 1s all;
+    -o-transition: 1s all;
+    -moz-transition: 1s all;
+    -ms-transition: 1s all;
+    width: 50%;
+  }
+
+  .inputSide input[type="submit"]:hover {
+    background-color: #6622703c;
+    border: solid 1px map-get($colors, 'snow');
+  }
+  
+  @media (max-width: 1440px) {
+    .wrap {
+      width: 55%; } }
+  
+  @media (max-width: 1366px) {
+    .wrap {
+      width: 65%; } }
+
+  @media (max-width: 991px) {
+    .wrap {
+      width: 70%; } }
+  
+  @media (max-width: 900px) {
+    .wrap {
+      width: 80%; } }
+  
+  @media (max-width: 800px) {
+    .inputSide {
+      min-height: 445px; } }
+  
+  @media (max-width: 768px) {
+    .wrap {
+      width: 90%; } }
+  
+  @media (max-width: 667px) {
+    .signContainer {
+      position: relative;
+    }
+    .content-left {
+      margin-left: auto;
+      transform: translateY(128%);
+      margin-right: auto;
+      width: 80%; }
+    .content-main {
+      width: 80%;
+      margin-left: auto;
+      transform: translateY(-80%);
+      margin-right: auto;
+     }
+    .inputSide {
+      min-height: 425px; }
+    .wrap {
+      width: 80%;      
+      display: block;  } }
+  
+  @media (max-width: 499px) {
+      .content-left {
+        transform: translateY(150%); }
+      .content-main {
+        transform: translateY(-68%);
+       } }
+  
+  @media (max-width: 435px) {
+    .inputSide input[type="email"], .inputSide input[type="text"], .inputSide input[type="password"] {
+      width: 89%; }
+    .content-info {
+      padding: 3em 2em; }
+    .inputSide {
+      padding: 2em; }
+      .content-left {
+        transform: translateY(110%); }
+      .content-main {
+        transform: translateY(-90%);
+       } 
+    }
+    
+  
+@media (max-width: 320px) {
+  .wrap {
+    width: 90%; }
+  .content-info {
+    padding: 2em 1em; }
+  .inputSide input[type="email"], .inputSide input[type="text"], .inputSide input[type="password"] {
+    width: 86%; }
+}
