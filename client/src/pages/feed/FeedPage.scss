@@ -1,12 +1,12 @@
 @import 'assets/styles/main.scss'; 
 
 .feedProfile {
+    font-family: libre-franklin;
     float: left;
     width: 25%;
-    position: fixed;
+    position: sticky;
     padding: 25px 0;
-    height: 100%;
-    background: #191919;
+    height: 100vh;
     overflow-x: hidden;
     overflow: hidden;
     @media screen and(max-width: 1200px){
@@ -44,9 +44,9 @@
 
 .feedImg {
     width: 80%;
-    height: 35%;
+    height: 38%;
     float: right;
-    background: pink;
+    border: 3px solid map-get($colors, 'greyeggplant');
     margin: 10%;
     position: relative;
     @media screen and(max-width: 550px){
@@ -64,9 +64,13 @@
     width: 80%;
     margin: 10%;
     height: 6%;
+    padding: 10px;
     position: relative;
+    font-weight: 600;
+    font-family: sans-serif;
     display: flex;
-    background: purple;
+    background: map-get($colors, 'greyeggplant');
+    color: map-get($colors, 'snow');
     @media screen and(max-width: 550px){
         width: 55%;
         margin: 10% 20%;
@@ -74,63 +78,100 @@
     }
 }
 
+.userStatusMessageFeed {
+    padding-top: 110px;
+    color: map-get($colors, 'greyeggplant');
+    text-transform: capitalize;
+}
+
 .coverImg {
     width: 100%;
     height: 60%;
-    background: green;
     position: absolute;
-
+    background: map-get($colors, 'greyeggplant');
 }
 
 .profileImg {
     width: 50%;
     height: 50%;
     border-radius: 100%;
-    background: palegoldenrod;
+    background: map-get($colors, 'greymidnight');
     position: absolute;
-    margin: 25%;
+    margin: 15% 25%;
+    text-align: center;
 }
 
 .feedButton {
     width: 33.33%;
     padding: 10px;
+    background: white;
+    color: map-get($colors, 'greyeggplant');
+    border: 1px solid map-get($colors, 'greyeggplant');
+    font-weight: 600;
+    &:hover {
+        background: map-get($colors, 'greyeggplant');
+        color: map-get($colors, 'snow');
+    }
 }
 
 .posts {
     margin-top: 30px;
+    color: map-get($colors, 'snow');
+    display: flex;
 }
+
+.feedPostTitle {
+        @include font-size($h2-font-sizes);
+        @include font-weight(regular);
+        font-family: $libre-franklin;
+
+}
+.feedPostUser, .feedPostCategory {
+    @include font-size-height($p-font-sizes, $h2-font-heights);
+    @include font-weight(light);
+    font-family: $libre-franklin;
+    color: map-get($colors, 'snow');
+}
+
+.feedPostCategory {
+    padding-bottom: 35px;
+}
+
 
 .feedPost {
     width: 100%;
-    background: purple;
+    background: map-get($colors, 'greyeggplant');
     margin-top: 10px;
     display: flex;
 }
 
 .feedPostBody{
-    width: 80%;
+    width: 70%;
     min-height: 100%;
-    background: pink;
-    padding: 10px 0;
+    background: map-get($colors, 'greyeggplant');
+    padding: 10px;
 }
 
 .feedPostDate {
-    width: 20%;
-    min-height: 100%;
-    background: orange;
+    width: 30%;
+    background: map-get($colors, 'snow');
+    border: 3px solid map-get($colors, 'greyeggplant');
+    color: map-get($colors, 'greyeggplant');
+   padding: 70px 10px 0;
+    text-align:center;
 }
 
 .feedPostImage {
-    width: 50px;
-    height: 50px;
-    background: black;
+    width: 150px;
+    height: 150px;
+    background: map-get($colors, 'greymidnight');
     float: left;
-    margin: 0 10px 0 10px;
-    padding: 30px;
+    margin: 0px 20px 0px 0px; 
+
 }
 
 .feedPostIcons {
-    float: right;
+    text-align: right;
     padding: 0 10px;
     i {
     margin: 0 30px;

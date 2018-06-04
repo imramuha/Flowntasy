@@ -4,10 +4,16 @@
   margin: 0 15px;
 }
 .listsubHeader {
-  background: black;
-  color: white;
+  border: 3px solid map-get($colors, 'greyeggplant'); 
+  border-bottom: none;
+  color: map-get($colors, 'greyeggplant');
   padding: 20px 0 0; 
   margin: 30px 0;
+}
+
+.feedTitle {
+  color: map-get($colors, 'greyeggplant');
+  padding: 50px;
 }
 
 .listHeader h1 {
@@ -21,18 +27,26 @@
 }
 
 .listsubCategory {
-  margin: 0 5% 0 0;
+  background:  map-get($colors, 'greyeggplant');
+  border: none;
+  color: map-get($colors, 'snow');
+  border-right: 3px solid map-get($colors, 'snow');
+  height: 100%;
+  min-width: 150px;
   @media screen and(max-width: 600px) {
     width: 100%;
+    min-width: 50px;
+  }
+  &:hover {
+    border-bottom: 3px solid map-get($colors, 'lighteggplant');
   }
 }
 
 .listsubCategories {
   display: flex;
   width: 100%;
-  margin: 15px 0;
-  background: grey;
-  padding: 15px 30px;
+  margin: 15px 0 0;
+  background:  map-get($colors, 'greyeggplant');
 }
 
 
@@ -42,31 +56,55 @@
   flex-wrap: wrap;
 }
 .listPostsContainer {
-  background: chocolate;
+  background:  map-get($colors, 'snow');
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 .listPost {
+  color: map-get($colors, 'greyeggplant');
   position: relative;
   width: 100%;
-  padding: 50px;
+  padding: 20px;
   min-height: 110px;
+  margin: 1%;
+  border: 3px solid  map-get($colors, 'greyeggplant');
 @media (min-width: 768px){
-    -ms-flex: 0 0 50%;
-    flex: 0 0 50%;
-    max-width: 50%;
+    -ms-flex: 0 0 48%;
+    flex: 0 0 48%;
+    max-width: 48%;
 }
 }
 
 .listPostImg {
-  background: wheat;
-  width: 30%;
+  background:  map-get($colors, 'greymidnight');
   float: left;
-  min-height: 100px;
+  width: 30%;
+  height: 130px;
+  @media screen and(min-width: 400px) {
+    height: 150px;
+  }
+  @media screen and(min-width: 992px) {
+    height: 150px;
+  }
+  @media screen and(min-width: 992px) {
+    height: 200px;
+  }
+}
+
+.PostsList {
+  margin: 0 20px;
+  color: map-get($colors, 'greyeggplant') !important;
+  overflow-wrap: break-word;
 }
 
 .listPostContent {
   width: 70%;
   float: right;
+}
+
+.listPostIcons.PostsList i {
+  align-content: center;
+  padding: 10px;
+  margin: 0 0 0 13%;
 }

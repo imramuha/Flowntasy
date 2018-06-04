@@ -31,107 +31,83 @@ class CommunitiesList extends Component {
     }
   }
 
-  componentDidMount() {
+  componentWillMount() {
+    this.loadCommunities();
+  }
+
+  loadCommunities = () => {
     fetch('https://flowntasy.herokuapp.com/api/v1/backoffice/communitiesTable')
       .then(response => response.json())
       .then(item => this.setState({ communities: item }));
   }
 
+  getCommunitiesAsJSX() {
+    let containerElement = '';
+    if (this.state.communities) {
+      containerElement = this.state.communities.map((community, index) => (
+        <div className="listCommunity">
+          <div className="listCommunityImg">
+          </div>
+          <div className="listPostContent CommunityList">
+            <div className="feedPostTitle PostsList">{community.community}</div>
+            <div className="feedPostUser PostsList">{community._category.category}</div>
+            <div className="feedPostTitle PostsList">{community.description}</div>
+            <div className="feedPostTitle PostsList">
+            <i class="fas fa-users"></i> {Object.keys(community.users_in).length}<br />
+            </div>
+          </div>
+          <div><button className="communityJoinButton">JOIN</button></div>
+        </div>
+
+      ));
+    }
+    return containerElement;
+  }
+
   render() {
     const { classes } = this.props;
-    if (this.state.communities) {
-      return (
-        <div className="listsCotainer">
-          <div className="listHeader">
+
+    return (
+      <div className="listsContainer">
+        <div className="listHeader">
 
 
-            <h1>There is no such place as home</h1>
-            <div className="listsubHeader">
+          <h1 className="feedTitle">There is no good place as home</h1>
+          <div className="listsubHeader">
 
 
-              <div className="listCategories" >
-                <h1>CATEGORIES &#9660;</h1>
-              </div>
+            <div className="listCategories" >
+              <h1>CATEGORIES &#9660;</h1>
+            </div>
 
-              <div className="listsubCategories">
-                <button className="listsubCategory">
-                  POPULAR
-                </button>
-                <button className="listsubCategory">
-                  RISING
-                </button>
-                <button className="listsubCategory">
-                  NEW
-                </button>
-              </div>
-
-
+            <div className="listsubCategories">
+              <button className="listsubCategory">
+                <h2>POPULAR 	&#9660;</h2>
+              </button>
+              <button className="listsubCategory">
+                <h2>RISING 	&#9650;</h2>
+              </button>
+              <button className="listsubCategory">
+                <h2>NEW 	&#9650;</h2>
+              </button>
             </div>
 
 
-            <div className="listPostsContainer">
-              <div className="listPost">
-                <div className="listPostImg">
-                </div>
-                <div className="listPostContent">
-                  <div>TITLE</div>
-                  <div>MADE BY</div>
-                  <div className="listPostIcons">
-                    <i className="fas fa-bars" />hello
-                  <i className="fas fa-bars" />hello
-                  <i className="fas fa-bars" />hello
-                </div>
-                <div>DESCRIPTION Ho ho ho</div>
-                </div>
-              </div>
-              <div className="listPost"></div>
-              <div className="listPost"></div>
-              <div className="listPost"></div>
-            </div>
+          </div>
 
 
+          <div className="listPostsContainer">
+            {this.getCommunitiesAsJSX()}
+          </div>
+        </div>
+      </div>
+    )
+  }
+}
 
-              </div>
-              <div className="row">
-                {this.state.communities.map((element, i) => (
-                  <div className="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-3" key={i}>
-                    <Card className={classes.card} key={element._id}>
-                      <CardMedia
-                        className={classes.media}
-                        image="https://material-components-web.appspot.com/images/16-9.jpg"
-                        title="Contemplative Reptile"
-                      />
-                      <CardContent>
-                        <Typography gutterBottom variant="headline" component="h2">
-                          {element.community}
-                        </Typography>
-                        <Typography component="p">
-                          {element.description}
-                        </Typography>
-                      </CardContent>
-                      <CardActions>
-                        <Button size="small" color="primary">
-                          {(element._category) ? element.categories : 'Uncategorized'}
-                        </Button>
-                      </CardActions>
-                    </Card>
-                  </div>
-                ))}
-              </div>
-            </div>
-            );
-    } else {
-      return (
-        <div>
 
-            </div>
-            )
-          }
-        }
-      }
-      
 CommunitiesList.propTypes = {
-              classes: PropTypes.object.isRequired,
-          };
-          
+  classes: PropTypes.object.isRequired,
+};
+
 export default withStyles(styles)(CommunitiesList);

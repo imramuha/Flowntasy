@@ -31,21 +31,54 @@ class PostsList extends Component {
     }
   }
 
-  componentDidMount() {
+  // get posts
+  loadPosts = () => {
     fetch('https://flowntasy.herokuapp.com/api/v1/backoffice/postsTable')
       .then(response => response.json())
       .then(item => this.setState({ posts: item }));
   }
 
+
+  componentWillMount() {
+    this.loadPosts();
+  }
+
+  getPostsAsJSX() {
+    let containerElement = '';
+    if (this.state.posts) {
+      containerElement = this.state.posts.map((post, index) => (
+        <div className="listPost">
+          <div className="listPostImg">
+          </div>
+          <div className="listPostContent">
+            <div className="feedPostTitle PostsList">{post.title}</div>
+            <div className="feedPostUser PostsList">made by {post._user.username}</div>
+            <div className="listPostIcons PostsList">
+  
+                <i class="fas fa-heart"></i>{Object.keys(post.liked_users).length}
+                <i class="fas fa-eye"></i>
+                <i class="fas fa-bookmark"></i>
+            
+            </div>
+            <div className="feedPostUser PostsList" >{post.description}</div>
+          </div>
+        </div>
+      ))
+    }
+    return containerElement;
+  }
+
+
+
   render() {
     const { classes } = this.props;
-    if (this.state.posts) {
+
       return (
         <div className="listsContainer">
           <div className="listHeader">
 
 
-            <h1>Experience the flow of other people</h1>
+            <h1 className="feedTitle">Experience the flow of other people</h1>
             <div className="listsubHeader">
 
 
@@ -55,13 +88,13 @@ class PostsList extends Component {
 
               <div className="listsubCategories">
                 <button className="listsubCategory">
-                  POPULAR
+                  <h2>POPULAR 	&#9660;</h2>
                 </button>
                 <button className="listsubCategory">
-                  RISING
+                  <h2>RISING 	&#9650;</h2>
                 </button>
                 <button className="listsubCategory">
-                  NEW
+                  <h2>NEW 	&#9650;</h2>
                 </button>
               </div>
 
@@ -70,105 +103,17 @@ class PostsList extends Component {
 
 
             <div className="listPostsContainer">
-              <div className="listPost">
-                <div className="listPostImg">
-                </div>
-                <div className="listPostContent">
-                  <div>TITLE</div>
-                  <div>MADE BY</div>
-                  <div className="listPostIcons">
-                    <i className="fas fa-bars" />hello
-                  <i className="fas fa-bars" />hello
-                  <i className="fas fa-bars" />hello
-                </div>
-                  <div>DESCRIPTION Ho ho ho</div>
-                </div>
-              </div>
-              <div className="listPost">
-                <div className="listPostImg">
-                </div>
-                <div className="listPostContent">
-                  <div>TITLE</div>
-                  <div>MADE BY</div>
-                  <div className="listPostIcons">
-                    <i className="fas fa-bars" />hello
-                  <i className="fas fa-bars" />hello
-                  <i className="fas fa-bars" />hello
-                </div>
-                  <div>DESCRIPTION Ho ho ho</div>
-                </div>
-              </div>
-              <div className="listPost">
-                <div className="listPostImg">
-                </div>
-                <div className="listPostContent">
-                  <div>TITLE</div>
-                  <div>MADE BY</div>
-                  <div className="listPostIcons">
-                    <i className="fas fa-bars" />hello
-                  <i className="fas fa-bars" />hello
-                  <i className="fas fa-bars" />hello
-                </div>
-                  <div>DESCRIPTION Ho ho ho</div>
-                </div>
-              </div>
-              
-              <div className="listPost">
-                <div className="listPostImg">
-                </div>
-                <div className="listPostContent">
-                  <div>TITLE</div>
-                  <div>MADE BY</div>
-                  <div className="listPostIcons">
-                    <i className="fas fa-bars" />hello
-                  <i className="fas fa-bars" />hello
-                  <i className="fas fa-bars" />hello
-                </div>
-                  <div>DESCRIPTION Ho ho ho</div>
-                </div>
-              </div>
-              
-              
+              {this.getPostsAsJSX()}
+
+
             </div>
 
 
           </div>
-          <div className="row">
-            {this.state.posts.map((element, i) => (
-              <div className="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-3" key={i}>
-                <Card className={classes.card} key={element._id}>
-                  <CardMedia
-                    className={classes.media}
-                    image="https://material-components-web.appspot.com/images/16-9.jpg"
-                    title="Contemplative Reptile"
-                  />
-                  <CardContent>
-                    <Typography gutterBottom variant="headline" component="h2">
-                      {element.title}
-                    </Typography>
-                    <Typography component="p">
-                      {element.description}
-                    </Typography>
-                  </CardContent>
-                  <CardActions>
-                    <Button size="small" color="primary">
-                      {(element._category) ? element.categories.name : 'Uncategorized'}
-                    </Button>
-                  </CardActions>
-                </Card>
-              </div>
-            ))}
           </div>
-        </div>
-      );
-    } else {
-      return (
-        <div>
 
-        </div>
       )
-    }
-  }
+      }
 }
 
 PostsList.propTypes = {

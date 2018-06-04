@@ -207,7 +207,7 @@ class Header extends Component {
           <img className='logo'  alt="Flowntasy logo" src={require("../../logoWhite.png")} />
 
           <div variant="title" color="inherit" className="title" >
-            <button className="flowButton"><a href='discover/create-post' >FLOW</a></button>
+           <a href='discover/create-post'  > <button  className="flowButton">FLOW</button></a>
           </div>
 
 
