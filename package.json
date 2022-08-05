@@ -14,7 +14,7 @@
     "https": "^1.0.0",
     "jsonwebtoken": "^8.2.0",
     "material-ui-search-bar": "^0.4.2",
-    "mongoose": "^5.0.10",
+    "mongoose": "^5.7.5",
     "morgan": "^1.9.0",
     "passport": "^0.4.0",
     "passport-facebook-token": "^3.3.0",
